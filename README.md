@@ -3,7 +3,7 @@
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=vexcited" alt="vexcited" /> </p>
 
-[![Spotify](https://vexcited.vercel.app/api/spotify)](https://open.spotify.com/user/ya2pmsrwdxkarhyp4q4a5a4or)
+<p align="center"> [![Spotify](https://vexcited.vercel.app/api/spotify)](https://open.spotify.com/user/ya2pmsrwdxkarhyp4q4a5a4or) </p>
 
 - 🔭 I’m currently working on **webosu and lpadder**
 
