@@ -4,7 +4,7 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=vexcited" alt="vexcited" /> <br>
   I'm currently listening to <br>
-  [![Spotify](https://novatorem.vercel.app/api/spotify)](https://open.spotify.com/user/omnitenebris)
+  [![Spotify](https://vexcited.vercel.app/api/spotify)](https://open.spotify.com/user/ya2pmsrwdxkarhyp4q4a5a4or)]
 </p>
 
 
@@ -15,7 +15,7 @@
 
 - 👨‍💻 All of my projects are available at [https://www.vexcited.ml](https://www.vexcited.ml)
 
-- 📫 How to reach me **vexitofficial@gmail.com**
+- 📫 E-Mail me at **vexitofficial@gmail.com**
 
 - ⚡ Fun fact **I started programming for a school project**
 
