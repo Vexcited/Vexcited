@@ -4,7 +4,7 @@
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=vexcited" alt="vexcited" /> <br>
   I'm currently listening to <br>
-  [![](https://vexcited.vercel.app/api/spotify)](https://open.spotify.com/user/ya2pmsrwdxkarhyp4q4a5a4or)
+  ![Spotify](https://vexcited.vercel.app/api/spotify)]
 </p>
 
 
