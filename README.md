@@ -2,9 +2,8 @@
 <h3 align="center">I am 14 and a passionate backend developer from France</h3>
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=vexcited" alt="vexcited" /> </p>
-[![Spotify](https://novatorem.vercel.app/api/spotify)](https://open.spotify.com/user/omnitenebris)
 
-
+[![Spotify](https://vexcited.vercel.app/api/spotify)](https://open.spotify.com/user/ya2pmsrwdxkarhyp4q4a5a4or)
 
 - 🔭 I’m currently working on **webosu and lpadder**
 
