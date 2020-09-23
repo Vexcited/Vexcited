@@ -16,8 +16,11 @@ I am 14 y.o. and a passionate backend developer from France
 
 ## Projects
 <p align = "center">
+[OneTwoTrie](https://ott.vexcited.ml) - School Project
 <a href = "https://github.com/vexcited/onetwotrie"><img align="center"  src="https://github-readme-stats.vercel.app/api/pin/?username=vexcited&repo=onetwotrie&theme=tokyonight" /></a>
  <a href = "https://github.com/Vexcited/windowsmediaremote-app"><img align="center"  src="https://github-readme-stats.vercel.app/api/pin/?username=vexcited&repo=windowsmediaremote-app&theme=tokyonight" /></a>
+[lpadder](https://web-launchpad.ml)
+[webosu](https://webosu.vexcited.ml)
 </p>
 
 ## GitHub Stats
