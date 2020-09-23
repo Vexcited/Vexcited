@@ -18,7 +18,7 @@ SPOTIFY_REFRESH_TOKEN = os.getenv("SPOTIFY_REFRESH_TOKEN")
 
 SPOTIFY_URL_REFRESH_TOKEN = "https://accounts.spotify.com/api/token"
 SPOTIFY_URL_NOW_PLAYING = "https://api.spotify.com/v1/me/player/currently-playing"
-SPOTIFY_URL_RECENTLY_PLAY = "https://api.spotify.com/v1/me/player/recently-played?limit=10"
+SPOTIFY_URL_RECENTLY_PLAY = "https://api.spotify.com/v1/me/player/recently-played?limit=5"
 
 app = Flask(__name__)
 
@@ -56,29 +56,8 @@ def nowPlaying():
 
     return response.json()
 
-def barGen(barCount):
-    barCSS = ""
-    left = 1
-    for i in range(1, barCount + 1):
-        anim = random.randint(1000, 1350)
-        barCSS += ".bar:nth-child({})  {{ left: {}px; animation-duration: {}ms; }}".format(
-            i, left, anim
-        )
-        left += 4
-
-    return barCSS
-
-def loadImageB64(url):
-    resposne = requests.get(url)
-    return b64encode(resposne.content).decode("ascii")
-
 def makeSVG(data):
-    barCount = 84
-    contentBar = "".join(["<div class='bar'></div>" for i in range(barCount)])
-    barCSS = barGen(barCount)
-
     if data == {} or data["item"] == 'None':
-        #contentBar = "" #Shows/Hides the EQ bar if no song is currently playing
         currentStatus = "Last seen playing:"
         recentPlays = recentlyPlayed()
         recentPlaysLength = len(recentPlays["items"])
@@ -87,17 +66,13 @@ def makeSVG(data):
     else:
         item = data["item"]
         currentStatus = "Listening to "
-
-    image = loadImageB64(item["album"]["images"][1]["url"])
+        
     artistName = item["artists"][0]["name"].replace("&", "&amp;")
     songName = item["name"].replace("&", "&amp;")
 
     dataDict = {
-        "contentBar": contentBar,
-        "barCSS": barCSS,
         "artistName": artistName,
         "songName": songName,
-        "image": image,
         "status": currentStatus
     }
 
