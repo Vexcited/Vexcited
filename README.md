@@ -16,10 +16,10 @@ I am 14 y.o. and a passionate backend developer from France
 
 ## Projects
 <p align = "center">
-  <a href = "https://vexcited.github.io/onetwotrie">OneTwoTrie - School Project</a>
-  <a href = "https://github.com/Vexcited/windowsmediaremote-app">Windows Media Remote (App & Server)</a>
-  <a href = "https://lpadder.vexcited.ml">lpadder (ex web-launchpad)</a>
-  <a href = "https://webosu.vexcited.ml">webosu!</a>
+  <a href = "https://vexcited.github.io/onetwotrie">OneTwoTrie - School Project</a> <br>
+  <a href = "https://github.com/Vexcited/windowsmediaremote-app">Windows Media Remote (App & Server)</a> <br>
+  <a href = "https://lpadder.vexcited.ml">lpadder (ex web-launchpad)</a> <br>
+  <a href = "https://webosu.vexcited.ml">webosu!</a> <br>
 </p>
 
 ## GitHub Stats
