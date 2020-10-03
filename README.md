@@ -25,7 +25,7 @@ I am 14 y.o. and a passionate backend developer from France
 ## GitHub Stats
 <p align = "center">
   <img src = "https://github-readme-stats.vercel.app/api?username=vexcited&show_icons=true&theme=tokyonight&line_height=27"> <br>
-  <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=vexcited&hide=css,java,html&theme=tokyonight">
+  <img src = "https://github-readme-stats.vercel.app/api/top-langs/?username=vexcited&theme=tokyonight">
 </p>
 
 
