@@ -3,13 +3,13 @@ J'ai 15 ans et je suis un développeur web backend passionné.
 
 [![Spotify](https://vexcited.vercel.app/api/spotify)](https://open.spotify.com/user/ya2pmsrwdxkarhyp4q4a5a4or)
 
-- 🔭 J'apprend actuellement le **Python**
+- 🔭 J'apprend actuellement le **JavaScript**
 
 - 🌱 J'étudie en ce moment au **Lycée Turgot** à Limoges (en France)
 
 - 📫 Pour me contacter, envoyez moi un mail à <a href="mailto:vexitofficial@gmail.com">**vexitofficial@gmail.com**</a>
 
-- 💻 Tous mes projets sont disponibles ici et sur <a href="https://vexcited.ml">mon site personnel</a> !
+- 💻 Tous mes projets sont disponibles ici et sur <a href="https://www.vexcited.ml">mon site personnel</a> !
 
 <hr>
 <h3 align="center">Tech Stack</h3>
@@ -21,8 +21,7 @@ J'ai 15 ans et je suis un développeur web backend passionné.
 <p align="center">
   <a href = "https://vexcited.github.io/onetwotrie">OneTwoTrie - School Project</a> <br>
   <a href = "https://github.com/Vexcited/windowsmediaremote-app">Windows Media Remote (App & Server)</a> <br>
-  <!-- <a href = "https://lpadder.vexcited.ml">lpadder (ex web-launchpad)</a> <br>
-  <a href = "https://webosu.vexcited.ml">webosu!</a> <br> -->
+  <a href = "https://github.com/Vexcited/array-checker">Array Checker</a>
 </p>
 
 <hr>
