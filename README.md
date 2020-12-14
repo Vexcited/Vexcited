@@ -1,7 +1,7 @@
 # Salut 👋, c'est Vexcited
 J'ai 15 ans et je suis un développeur web backend passionné.
 
-[![Spotify](https://vexcited.vercel.app/api/spotify)](https://open.spotify.com/user/ya2pmsrwdxkarhyp4q4a5a4or)
+<!-- [![Spotify](https://vexcited.vercel.app/api/spotify)](https://open.spotify.com/user/ya2pmsrwdxkarhyp4q4a5a4or) -->
 
 - 🔭 J'apprend actuellement le **JavaScript**
 
