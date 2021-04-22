@@ -10,4 +10,7 @@ J'ai 15 ans et je suis un développeur web backend passionné.
 - 💻 Tous mes projets sont disponibles ici et sur <a href="https://www.vexcited.me">mon site personnel</a> !
 
 <!--START_SECTION:waka-->
+```text
+No Activity tracked this Week
+```
 <!--END_SECTION:waka-->
