@@ -13,4 +13,13 @@
 # WakaTime ⏱
 
 <!--START_SECTION:waka-->
+```text
+Week: 27 August, 2021 - 02 September, 2021
+
+JavaScript   12 hrs 13 mins  ███████████████████░░░░░░   75.87 % 
+Markdown     1 hr 44 mins    ██▓░░░░░░░░░░░░░░░░░░░░░░   10.86 % 
+JSON         1 hr 41 mins    ██▓░░░░░░░░░░░░░░░░░░░░░░   10.46 % 
+TypeScript   8 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.91 % 
+HTML         4 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.47 % 
+```
 <!--END_SECTION:waka-->
