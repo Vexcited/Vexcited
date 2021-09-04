@@ -1,4 +1,4 @@
-# Vexcited's Website
+# Vexcited's Website [![Deploy Website](https://github.com/Vexcited/Vexcited/actions/workflows/website-deploy.yml/badge.svg)](https://github.com/Vexcited/Vexcited/actions/workflows/website-deploy.yml)
 
 Deployed with Vercel and boostrapped by `create-react-app`.
 
