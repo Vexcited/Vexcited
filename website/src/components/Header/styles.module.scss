@@ -1,4 +1,18 @@
 .imageLogo {
-	width: 12px;
-	height: 12px;
+	width: 2.5em;
+
+	transition: transform .3s ease;
+
+	&:hover {
+		transform: rotate(180deg);
+	}
+}
+
+// Remove the borders in <a> tags.
+.imageLogoLink {
+	border: none;
+
+	&:hover {
+		border: none;
+	}
 }
