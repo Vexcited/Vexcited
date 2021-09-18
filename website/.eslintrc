@@ -31,7 +31,7 @@
 		],
 		"semi": "error",
 		"no-trailing-spaces": "error",
-		"react/react-in-jsx-scope": "off"
+		"react/react-in-jsx-scope": "error"
 	},
 	"settings": {
 		"react": {

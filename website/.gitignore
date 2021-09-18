@@ -1,11 +1,12 @@
-# Dependencies
+# Depedencies
 node_modules
 
-# Production
-build
+# Build
+dist
 
 # Miscs
 .DS_Store
+*.local
 
 # Logs
 npm-debug.log*

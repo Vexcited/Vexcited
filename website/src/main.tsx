@@ -2,10 +2,10 @@ import ReactDOM from "react-dom";
 import React from "react";
 
 // Components
-import Header from "components/Header";
+import Header from "./components/Header";
 
 // Global CSS
-import "assets/globals.scss";
+import "./assets/globals.scss";
 
 ReactDOM.render(
 	<React.StrictMode>
