@@ -14,12 +14,6 @@
 
 <!--START_SECTION:waka-->
 ```text
-Week: 01 October, 2021 - 08 October, 2021
-
-TypeScript   2 hrs 44 mins   ███████████████▒░░░░░░░░░   60.84 % 
-JSON         1 hr 1 min      █████▓░░░░░░░░░░░░░░░░░░░   22.84 % 
-HTML         17 mins         █▓░░░░░░░░░░░░░░░░░░░░░░░   06.43 % 
-SCSS         10 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.98 % 
-Markdown     7 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.74 % 
+No Activity tracked this Week
 ```
 <!--END_SECTION:waka-->
