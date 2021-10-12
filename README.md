@@ -1,6 +1,6 @@
 # Hey ! 🌃
 
-- 🔭 Je développe en **JavaScript**, **TypeScript**, **C#** et un peu de PHP.
+- 🔭 Je développe en **JavaScript**, enfin plutôt en **TypeScript** !
 
 - 🌱 J'étudie en ce moment au Lycée Turgot à Limoges, en France.
 
