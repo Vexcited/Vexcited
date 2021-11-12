@@ -1,0 +1,26 @@
+.button {
+  padding: 0.25em 0.75em;
+  margin: 0.25em;
+
+  background: #E5E9F0;
+  color: #2e3440;
+
+  border: 2px solid #E5E9F0;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+
+  transition: .2s;
+
+  &:hover,
+  &:focus {
+    background: #88C0D0;
+    border-color: #88C0D0;
+  }
+}
+
+.outlined {
+  background: #2e3440;
+  color: #E5E9F0;
+}

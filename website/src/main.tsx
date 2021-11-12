@@ -2,15 +2,18 @@ import ReactDOM from "react-dom";
 import React from "react";
 
 // Components
-import Header from "./components/Header";
+import Button from "./components/Button";
 
 // Global CSS
 import "./assets/globals.scss";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Header />
-		<p>Le site est en cours de reconstruction ! Merci de patienter un peu avant sa réouverture.</p>
+
+    <div>
+      <Button>PROJETS</Button>
+      <Button outlined>CV</Button>
+    </div>
 		<p>En attendant vous pouvez faire un tour sur mon {" "}
 			<a href="https://github.com/Vexcited" target="_blank" rel="noreferrer">
 				GitHub
