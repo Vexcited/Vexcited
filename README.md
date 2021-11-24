@@ -14,6 +14,11 @@
 
 <!--START_SECTION:waka-->
 ```text
-No Activity tracked this Week
+Week: 16 November, 2021 - 23 November, 2021
+
+TypeScript   1 hr 21 mins    ██████████████████▓░░░░░░   74.75 % 
+JavaScript   12 mins         ███░░░░░░░░░░░░░░░░░░░░░░   11.37 % 
+HTML         11 mins         ██▓░░░░░░░░░░░░░░░░░░░░░░   10.99 % 
+JSON         3 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.89 % 
 ```
 <!--END_SECTION:waka-->
