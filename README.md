@@ -8,7 +8,7 @@
 
 - 💻 Tous mes projets sont disponibles ici et sur <a href="https://www.vexcited.me">mon site personnel</a> !
 
-- 👀 Mes projets actuellement en cours sont [CreateDisBot](https://github.com/Vexcited/createdisbot), [dynamic-dns](https://github.com/Vexcited/dynamic-dns) et [lpadder](https://github.com/Vexcited/lpadder).
+- 👀 Mon projets actuellement en cours est [lpadder](https://github.com/Vexcited/lpadder).
 
 # WakaTime ⏱
 
