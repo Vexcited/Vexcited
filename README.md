@@ -8,7 +8,7 @@
 
 - 💻 Tous mes projets sont disponibles ici et sur <a href="https://www.vexcited.me">mon site personnel</a> !
 
-- 👀 Mon projets actuellement en cours est [lpadder](https://github.com/Vexcited/lpadder).
+- 👀 Je travaille actuellement sur [lpadder](https://github.com/Vexcited/lpadder).
 
 # WakaTime ⏱
 
