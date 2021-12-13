@@ -1,9 +1,8 @@
 module.exports = {
-  purge: [
+  content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
-  darkMode: false,
   theme: {
     colors: {
       grey: {
@@ -24,10 +23,12 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Poppins", "sans-serif"]
+    },
+    extend: {
+      backgroundImage: {
+        "separator-mainHero": "url('/src/assets/mainHeroSeparator.svg')"
+      }
     }
-  },
-  variants: {
-    extend: {}
   },
   plugins: []
 }
