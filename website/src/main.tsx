@@ -3,6 +3,7 @@ import React from "react";
 
 // Fonts
 import "@fontsource/poppins";
+import "@fontsource/fira-code";
 
 // Tailwind CSS
 import "tailwindcss/tailwind.css";
@@ -13,10 +14,10 @@ import MainHero from "./components/MainHero";
 import AboutMe from "./components/AboutMe";
 
 ReactDOM.render(
-	<React.StrictMode>
-		<Header />
-		<MainHero />
-		<AboutMe />
-	</React.StrictMode>,
-	document.getElementById("root")
+  <React.StrictMode>
+    <Header />
+    <MainHero />
+    <AboutMe />
+  </React.StrictMode>,
+  document.getElementById("root")
 );

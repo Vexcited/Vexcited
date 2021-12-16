@@ -22,7 +22,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ["Poppins", "sans-serif"]
+      sans: ["Poppins", "sans-serif"],
+      mono: ["FiraCode", "monospace"]
     },
     extend: {
       backgroundImage: {

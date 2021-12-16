@@ -21,15 +21,9 @@
 		"plugin:@typescript-eslint/recommended"
 	],
 	"rules": {
-		"quotes": [
-			"error",
-			"double"
-		],
-		"indent": [
-			"error",
-			"tab"
-		],
 		"semi": "error",
+		"indent": ["error", 2],
+		"quotes": ["error", "double"],
 		"no-trailing-spaces": "error",
 		"react/react-in-jsx-scope": "error"
 	},
