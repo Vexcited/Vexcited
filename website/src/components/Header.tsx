@@ -13,7 +13,7 @@ export default function Header () {
       `}
     >
       <a
-        href="#"
+        href="#intro"
         className="flex items-center gap-4"
       >
         <img
@@ -24,6 +24,13 @@ export default function Header () {
         <span>
           Mikkel RINGAUD
         </span>
+      </a>
+
+      <a
+        href="#contact"
+        className="px-6 py-4 bg-blue"
+      >
+        Me contacter
       </a>
     </header>
   );

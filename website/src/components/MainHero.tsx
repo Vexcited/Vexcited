@@ -11,12 +11,15 @@ export default function MainHero () {
       "
     >
       <div>
-        <p className="font-mono">👋 Bienvenue, je m&apos;appelle</p>
+        <p className="font-mono">
+          👋 Bienvenue, je m&apos;appelle
+        </p>
         <h1 className="text-4xl font-bold">
-        Mikkel RINGAUD
+          Mikkel RINGAUD
         </h1>
-        <span className="text-sm text-opacity-80
-      ">... alias Vexcited.</span>
+        <span className="text-sm text-opacity-80">
+          et j&apos;adore le <strong>développement web</strong>.
+        </span>
       </div>
 
       <p className="text-white text-opacity-60 sm:w-96">
@@ -39,7 +42,14 @@ export default function MainHero () {
       </p>
 
       <div>
-        <a href="https://instagram.com/vexcitedoff" target="_blank" className="px-5 py-3 text-blue hover:bg-blue focus:bg-blue inline-block hover:bg-opacity-20 focus:bg-opacity-20 bg-transparent border-blue border-2 rounded transition-colors" rel="noreferrer">Mes cours Instagram</a>
+        <a
+          href="https://instagram.com/vexcitedoff"
+          target="_blank"
+          className="px-5 py-3 text-blue hover:bg-blue focus:bg-blue inline-block hover:bg-opacity-20 focus:bg-opacity-20 bg-transparent border-blue border-2 rounded transition-colors"
+          rel="noreferrer"
+        >
+          Mes mini-cours Instagram
+        </a>
       </div>
     </section>
   );
