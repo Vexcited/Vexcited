@@ -4,11 +4,11 @@
 
 - 🌱 J'étudie en ce moment au Lycée Turgot à Limoges, en France.
 
-- 📫 Pour me contacter, envoyez moi un mail à <a href="mailto:vexitofficial@gmail.com">vexitofficial@gmail.com</a>
+- 📫 Pour me contacter, envoyez moi un mail à <a href="mailto:mikkel@milescode.dev">mikkel@milescode.dev</a>
 
 - 💻 Tous mes projets sont disponibles ici et sur <a href="https://www.vexcited.me">mon site personnel</a> !
 
-- 👀 Je travaille actuellement sur [lpadder](https://github.com/Vexcited/lpadder).
+- 👀 Je travaille actuellement sur [lpadder](https://github.com/Vexcited/lpadder), [Rikka](https://github.com/Vexcited/Rikka) et [Pornote](https://github.com/Vexcited/Pornote).
 
 # WakaTime ⏱
 
