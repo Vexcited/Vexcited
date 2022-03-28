@@ -14,7 +14,7 @@
 
 <!--START_SECTION:waka-->
 ```text
-Week: 19 March, 2022 - 26 March, 2022
+Week: 20 March, 2022 - 27 March, 2022
 
 TypeScript   14 hrs 10 mins  ███████████████░░░░░░░░░░   59.97 % 
 JavaScript   7 hrs 17 mins   ███████▓░░░░░░░░░░░░░░░░░   30.87 % 
