@@ -14,12 +14,12 @@
 
 <!--START_SECTION:waka-->
 ```text
-Week: 23 March, 2022 - 30 March, 2022
+Week: 24 March, 2022 - 31 March, 2022
 
-JavaScript   10 hrs 38 mins  █████████████▓░░░░░░░░░░░   54.81 % 
-TypeScript   6 hrs 28 mins   ████████▒░░░░░░░░░░░░░░░░   33.37 % 
-HTML         1 hr 20 mins    █▓░░░░░░░░░░░░░░░░░░░░░░░   06.90 % 
-Other        18 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.61 % 
-SCSS         16 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.38 % 
+JavaScript   10 hrs 27 mins  █████████████████░░░░░░░░   67.40 % 
+TypeScript   3 hrs 4 mins    █████░░░░░░░░░░░░░░░░░░░░   19.83 % 
+HTML         1 hr 20 mins    ██░░░░░░░░░░░░░░░░░░░░░░░   08.60 % 
+Other        18 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.02 % 
+Markdown     13 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.41 % 
 ```
 <!--END_SECTION:waka-->
