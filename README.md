@@ -13,13 +13,16 @@
 # WakaTime ⏱
 
 <!--START_SECTION:waka-->
-```text
-Week: 10 April, 2022 - 17 April, 2022
 
-TypeScript   8 hrs 22 mins   ██████████████▓░░░░░░░░░░   58.41 % 
-JavaScript   3 hrs 40 mins   ██████▒░░░░░░░░░░░░░░░░░░   25.68 % 
-SCSS         1 hr 22 mins    ██▒░░░░░░░░░░░░░░░░░░░░░░   09.62 % 
-Markdown     23 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.68 % 
-JSON         12 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.45 % 
+```text
+From: 12 April 2022 - To: 19 April 2022
+
+TypeScript   13 hrs 41 mins  ███████████████░░░░░░░░░░   60.25 %
+JavaScript   6 hrs 4 mins    ██████▓░░░░░░░░░░░░░░░░░░   26.71 %
+SCSS         1 hr 19 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   05.80 %
+Markdown     44 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.24 %
+JSON         35 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.63 %
+Other        12 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.90 %
 ```
+
 <!--END_SECTION:waka-->
