@@ -15,11 +15,10 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 03 May 2022 - To: 10 May 2022
+From: 04 May 2022 - To: 11 May 2022
 
 JavaScript   1 hr 27 mins    ████████████████████████░   95.59 %
 SCSS         4 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   04.41 %
-Bash         0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 %
 ```
 
 <!--END_SECTION:waka-->
