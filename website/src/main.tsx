@@ -1,23 +1,20 @@
-import ReactDOM from "react-dom";
-import React from "react";
-
-// Fonts
+/* @refresh reload */
 import "@fontsource/poppins";
 import "@fontsource/fira-code";
+/** WindiCSS */ import "windi.css";
 
-// Tailwind CSS
-import "tailwindcss/tailwind.css";
+import { render } from "solid-js/web";
 
 // Components
-import Header from "./components/Header";
-import MainHero from "./components/MainHero";
-import AboutMe from "./components/AboutMe";
+import Header from "@/components/Header";
+import MainHero from "@/components/MainHero";
+import AboutMe from "@/components/AboutMe";
 
-ReactDOM.render(
-  <React.StrictMode>
+render(
+  () => <>
     <Header />
     <MainHero />
     <AboutMe />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </>,
+  document.getElementById("root") as HTMLDivElement
 );

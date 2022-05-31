@@ -1,18 +1,14 @@
 # Vexcited's Website [![Deploy Website](https://github.com/Vexcited/Vexcited/actions/workflows/website-deploy.yml/badge.svg)](https://vexcited.vercel.app/)
 
-Deployed with [Vercel](https://vercel.com) and bootstrapped with [Vite](https://vitejs.dev/).
+Made with [Solid](https://solidjs.com), [WindiCSS](https://windicss.org) and deployed on [Vercel](https://vercel.com). 
 
-You can see the production build on [my website](https://vexcited.vercel.app/).
+I use a [GitHub Action to deploy to Vercel](https://github.com/marketplace/actions/vercel-action) to prevent deploying changes on README updates made for WakaTime tracking.
 
-I deploy to Vercel manually with `vercel-action` to prevent a new deploy on README updates for WakaTime.
+## Development
 
-## Installation
+`git clone https://github.com/Vexcited/Vexcited`, `cd ./Vexcited/website` and run `pnpm install` to install dependencies.
 
-Clone the repo, `cd website` and run `yarn` to install depedencies.
-Then type `yarn dev` to start Vite development server
-or type `yarn build` to run the Vite build script (build folder will be `/dist`).
+Use `pnpm dev` to start Vite development server
+or `pnpm build` to build into the `./dist` folder.
 
-## Contribute
-
-Before commiting, run `yarn lint` to lint the code and fix the styling errors with `yarn lint --fix`.
-
+Also, use lint the code using `pnpm lint` and fix the styling errors with `pnpm lint --fix`.

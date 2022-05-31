@@ -1,9 +1,9 @@
-import React from "react";
+import type { Component } from "solid-js";
 
-export default function MainHero () {
+const MainHero: Component = () => {
   return (
     <section
-      className="
+      class="
         flex justify-center flex-col
         h-screen gap-6 px-6 sm:px-24
         bg-separator-mainHero
@@ -11,29 +11,29 @@ export default function MainHero () {
       "
     >
       <div>
-        <p className="font-mono">
+        <p class="font-mono">
           👋 Bienvenue, je m&apos;appelle
         </p>
-        <h1 className="text-4xl font-bold">
+        <h1 class="text-4xl font-bold">
           Mikkel RINGAUD
         </h1>
-        <span className="text-sm text-opacity-80">
+        <span class="text-sm text-opacity-80">
           et j&apos;adore le <strong>développement web</strong>.
         </span>
       </div>
 
-      <p className="text-white text-opacity-60 sm:w-96">
+      <p class="text-white text-opacity-60 sm:w-96">
         Je suis étudiant et développeur web full-stack.
         Développeur de l&apos;application web {" "}
         <a
-          className="text-blue text-opacity-60 hover:text-opacity-100 focus:text-opacity-100 transition-colors"
+          class="text-blue text-opacity-60 hover:text-opacity-100 focus:text-opacity-100 transition-colors"
           href="https://github.com/Vexcited/lpadder"
           target="_blank"
         >
           lpadder
         </a> et membre du duo {" "}
         <a
-          className="text-blue text-opacity-60 hover:text-opacity-100 focus:text-opacity-100 transition-colors"
+          class="text-blue text-opacity-60 hover:text-opacity-100 focus:text-opacity-100 transition-colors"
           href="https://github.com/MilesCodeIt"
           target="_blank"
         >
@@ -45,7 +45,7 @@ export default function MainHero () {
         <a
           href="https://instagram.com/vexcitedoff"
           target="_blank"
-          className="px-5 py-3 text-blue hover:bg-blue focus:bg-blue inline-block hover:bg-opacity-20 focus:bg-opacity-20 bg-transparent border-blue border-2 rounded transition-colors"
+          class="px-5 py-3 text-blue hover:bg-blue focus:bg-blue inline-block hover:bg-opacity-20 focus:bg-opacity-20 bg-transparent border-blue border-2 rounded transition-colors"
           rel="noreferrer"
         >
           Mes mini-cours Instagram
@@ -53,4 +53,6 @@ export default function MainHero () {
       </div>
     </section>
   );
-}
+};
+
+export default MainHero;

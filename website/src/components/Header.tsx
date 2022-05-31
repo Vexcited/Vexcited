@@ -1,10 +1,11 @@
-import React from "react";
-import Logo from "../assets/logo.svg";
+import type { Component } from "solid-js";
 
-export default function Header () {
+import Logo from "@/assets/logo.svg";
+
+const Header: Component = () => {
   return (
     <header
-      className={`
+      class={`
         flex justify-between
         px-6 py-4
         fixed w-full top-0 
@@ -14,12 +15,12 @@ export default function Header () {
     >
       <a
         href="#intro"
-        className="flex items-center gap-4"
+        class="flex items-center gap-4"
       >
         <img
           alt="Vexcited's Logo"
           src={Logo}
-          className="h-8 w-8"
+          class="h-8 w-8"
         />
         <span>
           Mikkel RINGAUD
@@ -28,10 +29,12 @@ export default function Header () {
 
       <a
         href="#contact"
-        className="px-6 py-4 bg-blue"
+        class="px-6 py-4 bg-blue"
       >
         Me contacter
       </a>
     </header>
   );
-}
+};
+
+export default Header;

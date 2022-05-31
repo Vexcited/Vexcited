@@ -1,8 +1,6 @@
 module.exports = {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}"
-  ],
+  darkMode: false,
+
   theme: {
     colors: {
       grey: {
@@ -21,15 +19,18 @@ module.exports = {
         light: "#8FBCBB"
       }
     },
+    
     fontFamily: {
       sans: ["Poppins", "sans-serif"],
       mono: ["FiraCode", "monospace"]
     },
+
     extend: {
       backgroundImage: {
         "separator-mainHero": "url('/src/assets/mainHeroSeparator.svg')"
       }
     }
   },
+
   plugins: []
 }
