@@ -1,16 +1,16 @@
-# Hey ! 🌃
+# Welcome to my GitHub ! 🌃
 
-- 🔭 Je développe en **JavaScript**, enfin plutôt en **TypeScript** !
+- 🔭 My main language is [TypeScript](https://www.typescriptlang.org/).
 
-- 🌱 J'étudie en ce moment au Lycée Turgot à Limoges, en France.
+- 🌱 I am a student at Lycée Turgot in Limoges, France.
 
-- 📫 Pour me contacter, envoyez moi un mail à <a href="mailto:mikkel@milescode.dev">mikkel@milescode.dev</a>
+- 📫 Need to contact me ? Send me <a href="mailto:mikkel@milescode.dev">a mail</a> !
 
-- 💻 Tous mes projets sont disponibles ici et sur <a href="https://www.vexcited.ml">mon site personnel</a> !
+- 💻 All my projects are open-source so you can so them all right here and on <a href="https://www.vexcited.ml">my website</a> !
 
-- 👀 Je travaille actuellement sur [lpadder](https://github.com/Vexcited/lpadder) et [Pornote](https://github.com/Vexcited/Pornote).
+- 👀 I currently work on [lpadder](https://github.com/Vexcited/lpadder) and [Pornote](https://github.com/Vexcited/Pornote).
 
-# WakaTime ⏱
+## WakaTime ⏱
 
 <!--START_SECTION:waka-->
 
@@ -26,3 +26,7 @@ HTML         10 mins         ▒░░░░░░░░░░░░░░░░
 ```
 
 <!--END_SECTION:waka-->
+
+## Sponsors
+
+I don't have any sponsor actually, come back later if you want to sponsor me !
