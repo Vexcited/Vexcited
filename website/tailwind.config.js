@@ -32,5 +32,7 @@ module.exports = {
     }
   },
 
-  plugins: []
+  plugins: [
+    require("windicss/plugin/aspect-ratio")
+  ]
 }
