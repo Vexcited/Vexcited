@@ -1,22 +1,14 @@
-import type { Component, JSX } from "solid-js";
-
-export interface DesktopItemType {
-  name: string;
-  icon: JSX.Element;
-  action: () => unknown;
-}
+import type { Component } from "solid-js";
+import type { DesktopItem as DesktopItemType } from "@/stores/desktop";
 
 const DesktopItem: Component<DesktopItemType> = (props) => {
   return (
     <div
-      class="h-12 w-12 flex flex-col gap-2 items-center"
-      onClick={() => props.action()}
+      class="cursor-pointer rounded-sm select-none hover:bg-grey-dark hover:bg-opacity-20 hover:border-grey-dark border border-transparent h-24 p-2 aspect-square flex flex-col gap-2 items-center"
+      onClick={() => props.start_action()}
     >
-      <div class="hover:bg-grey-dark h-full">
-        {props.icon}
-      </div>
-
-      <p>{props.name}</p>
+      {props.icon}
+      {props.name}
     </div>
   );
 };

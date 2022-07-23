@@ -1,15 +1,15 @@
-import type { Component } from "solid-js";
+import { Component, Index } from "solid-js";
 
 import { For } from "solid-js";
 
 import DesktopItem from "@/components/DesktopItem";
+import Window from "@/components/Window";
 
-import { desktopItems } from "@/stores/desktop";
+import { desktopItems, openedWindows } from "@/stores/desktop";
 
 import VexcitedLogo from "@/assets/logo.svg";
 
 const Desktop: Component = () => {
-
   return (
     <div class="h-screen w-screen bg-grey">
 
@@ -23,15 +23,19 @@ const Desktop: Component = () => {
           )}
         </For>
       </div>
-    
-    
+
+      {/** Desktop Windows */}
+      <For each={openedWindows}>
+        {(window_props, window_index) => (
+          <Window index={window_index()} {...window_props} />
+        )}
+      </For>
+
       {/** Taskbar */}
       <div class="flex p-3 fixed bottom-0 w-full h-16 bg-grey-light">
-
         <div class="h-full w-auto aspect-square">
-          <img alt="Launcher logo" src={VexcitedLogo} />
+          <img alt="vexcited's logo" src={VexcitedLogo} />
         </div>
-
       </div>
 
     </div>
