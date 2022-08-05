@@ -1,12 +1,13 @@
-import solidPlugin from "vite-plugin-solid";
-import WindiCSS from "vite-plugin-windicss";
 import { defineConfig } from "vite";
 import path from "path";
 
+import solid from "vite-plugin-solid";
+import windicss from "vite-plugin-windicss";
+
 export default defineConfig({
   plugins: [
-    solidPlugin(),
-    WindiCSS()
+    solid(),
+    windicss()
   ],
 
   resolve: {
@@ -15,8 +16,11 @@ export default defineConfig({
     }
   },
 
+  server: {
+    port: 3000
+  },
+
   build: {
-    target: "esnext",
-    polyfillDynamicImport: false
+    target: "esnext"
   }
 });

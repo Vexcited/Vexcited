@@ -1,13 +1,25 @@
-import type { Component } from "solid-js";
+import type { Component, ParentComponent } from "solid-js";
 import type { OpenedWindow } from "@/stores/desktop";
 
-import { createEffect, onCleanup } from "solid-js";
+import { Show, createSignal } from "solid-js";
 
 import { setOpenedWindows, openedWindows } from "@/stores/desktop";
 
-const Window: Component<OpenedWindow & { index: number }> = (props) => {
-  let window_holder_ref: HTMLDivElement | undefined;
+import { IoClose, } from "solid-icons/io";
+import { HiSolidPlus, HiSolidMinus } from "solid-icons/hi";
 
+const [controlButtonsHovered, setControlButtonsHovered] = createSignal(false);
+const WindowControlButton: ParentComponent<{ color: string }> = (props) => {
+  return (
+    <button class="cursor-default flex justify-center items-center h-3 w-3 rounded-full" style={`background-color: ${props.color}`}>
+      <Show when={controlButtonsHovered()}>
+        {props.children}
+      </Show>
+    </button>
+  );
+};
+
+const Window: Component<OpenedWindow & { index: number }> = (props) => {
   const updateWindowPosition = (position: { x: number, y: number }) => {
     const previous_window = openedWindows[props.index];
     const windows = [...openedWindows];
@@ -31,24 +43,14 @@ const Window: Component<OpenedWindow & { index: number }> = (props) => {
     window.removeEventListener("mouseup", windowHolderMouseUp);
   };
 
-  const windowHolderMouseDown = (e: MouseEvent) => {
+  const windowHolderMouseDown = () => {
     window.addEventListener("mousemove", windowHolderMouseMove);
     window.addEventListener("mouseup", windowHolderMouseUp);
   };
 
-  createEffect(() => {
-    if (!window_holder_ref) return;
-    window_holder_ref.addEventListener("mousedown", windowHolderMouseDown);
-    
-    onCleanup(() => {
-      if (!window_holder_ref) return;
-      window_holder_ref.removeEventListener("mousedown", windowHolderMouseDown);
-    });
-  });
-
   return (
     <div
-      class="fixed border border-white-dark rounded-md"
+      class="fixed border border-grey-light shadow-xl shadow-grey-dark rounded-md flex flex-col"
       style={{
         width: "250px",
         height: "120px",
@@ -56,7 +58,27 @@ const Window: Component<OpenedWindow & { index: number }> = (props) => {
         left: !(props.isMaximized) ? props.position.x + "px" : 0 + "px"
       }}
     >
-      <div ref={window_holder_ref} class="h-8 rounded-t bg-white-dark w-full">
+      <div
+        onMouseDown={windowHolderMouseDown}
+        class="px-2.5 h-10 rounded-t bg-grey-dark w-full flex"
+      >
+        <div
+          onMouseEnter={() => setControlButtonsHovered(true)}
+          onMouseLeave={() => setControlButtonsHovered(false)}
+          class="flex items-center gap-1.5"
+        >
+          <WindowControlButton color="#FC685D">
+            <IoClose color="#981810" size="100%" />
+          </WindowControlButton>
+
+          <WindowControlButton color="#FDBF45">
+            <HiSolidMinus color="#9D5F1A" size="95%" />
+          </WindowControlButton>
+
+          <WindowControlButton color="#3EC54C">
+            <HiSolidPlus color="#10610F" size="100%" />
+          </WindowControlButton>
+        </div>
 
       </div>
 
