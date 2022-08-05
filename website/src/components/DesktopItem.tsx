@@ -7,7 +7,7 @@ const DesktopItem: Component<DesktopItemType> = (props) => {
       class="cursor-pointer rounded-sm select-none hover:bg-grey-dark hover:bg-opacity-20 hover:border-grey-dark border border-transparent h-24 p-2 aspect-square flex flex-col gap-2 items-center"
       onClick={() => props.start_action()}
     >
-      {props.icon}
+      <props.icon size={"100%"} />
       {props.name}
     </div>
   );
