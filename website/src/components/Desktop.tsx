@@ -1,6 +1,6 @@
 import type { Component } from "solid-js";
 
-import { For } from "solid-js";
+import { Index, For } from "solid-js";
 
 import DesktopItem from "@/components/DesktopItem";
 import Window from "@/components/Window";
@@ -17,19 +17,17 @@ const Desktop: Component = () => {
       <div class="flex p-6">
         <For each={desktopItems}>
           {item => (
-            <DesktopItem
-              {...item}
-            />
+            <DesktopItem {...item} />
           )}
         </For>
       </div>
 
       {/** Desktop Windows */}
-      <For each={openedWindows}>
-        {(window_props, window_index) => (
-          <Window index={window_index()} {...window_props} />
+      <Index each={openedWindows}>
+        {(_, window_index) => (
+          <Window index={window_index} />
         )}
-      </For>
+      </Index>
 
       {/** Taskbar */}
       <div class="flex p-3 fixed bottom-0 w-full h-16 bg-grey-light">

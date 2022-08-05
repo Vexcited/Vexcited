@@ -1,5 +1,7 @@
 import type { IconTypes } from "solid-icons";
+import type { Component } from "solid-js";
 
+import { lazy } from "solid-js";
 import { createStore } from "solid-js/store";
 import { AiFillMessage } from "solid-icons/ai";
 
@@ -11,33 +13,9 @@ export interface DesktopItem {
   start_action: () => unknown;
 }
 
-export const defaultDesktopItems: DesktopItem[] = [
-  {
-    id: "contact",
-    name: "Contact",
-    icon: AiFillMessage,
-    start_action: () => {
-      setOpenedWindows(
-        draft => [...draft,
-          {
-            desktopItemId: "contact",
-            isMaximized: false,
-            isMinimized: false,
-            position: {
-              x: 0,
-              y: 0
-            }
-          }
-        ]
-      );
-    }
-  }
-];
-
-export const [desktopItems, setDesktopItems] = createStore<DesktopItem[]>(defaultDesktopItems);
-
 export interface OpenedWindow {
   desktopItemId: string;
+  component: Component;
   
   isMaximized: boolean;
   isMinimized: boolean;
@@ -48,5 +26,31 @@ export interface OpenedWindow {
   };
 }
 
-/** Returns an empty array if no window is opened. */
+export const createNewWindow = (desktopItemId: string, component: Component): OpenedWindow => ({
+  desktopItemId,
+  component,
+
+  isMaximized: false,
+  isMinimized: false,
+  
+  position: {
+    x: 0,
+    y: 0
+  }
+});
+
+export const defaultDesktopItems: DesktopItem[] = [
+  {
+    id: "contact",
+    name: "Contact",
+    icon: AiFillMessage,
+    start_action: () => {
+      setOpenedWindows(
+        draft => [...draft, createNewWindow("contact", lazy(() => import("@/windows/Contact")))]
+      );
+    }
+  }
+];
+
+export const [desktopItems, setDesktopItems] = createStore<DesktopItem[]>(defaultDesktopItems);
 export const [openedWindows, setOpenedWindows] = createStore<OpenedWindow[]>([]);
