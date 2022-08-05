@@ -1,22 +1,21 @@
-import type { JSX } from "solid-js";
+import type { IconTypes } from "solid-icons";
 
 import { createStore } from "solid-js/store";
 import { AiFillMessage } from "solid-icons/ai";
 
 export interface DesktopItem {
-  /** Identifier, *like an executable name*. */
+  /** Identifier, like an executable name. */
   id: string;
   name: string;
-  icon: JSX.Element;
+  icon: IconTypes;
   start_action: () => unknown;
 }
 
-/** Default items on the desktop when "booting". */
 export const defaultDesktopItems: DesktopItem[] = [
   {
     id: "contact",
     name: "Contact",
-    icon: <AiFillMessage size={"100%"}/>,
+    icon: AiFillMessage,
     start_action: () => {
       setOpenedWindows(
         draft => [...draft,
