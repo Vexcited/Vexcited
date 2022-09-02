@@ -15,12 +15,12 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 24 August 2022 - To: 31 August 2022
+From: 25 August 2022 - To: 01 September 2022
 
-Markdown     7 hrs 8 mins    ███████████████░░░░░░░░░░   59.38 %
-TypeScript   2 hrs 52 mins   ██████░░░░░░░░░░░░░░░░░░░   23.95 %
-JSON         1 hr 14 mins    ██▓░░░░░░░░░░░░░░░░░░░░░░   10.31 %
-Other        22 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.11 %
+Markdown     7 hrs 8 mins    ███████████████▒░░░░░░░░░   60.72 %
+TypeScript   2 hrs 52 mins   ██████░░░░░░░░░░░░░░░░░░░   24.49 %
+JSON         1 hr 14 mins    ██▓░░░░░░░░░░░░░░░░░░░░░░   10.54 %
+Other        22 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.18 %
 ```
 
 <!--END_SECTION:waka-->
