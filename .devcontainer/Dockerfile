@@ -4,8 +4,13 @@ ARG NODE_VERSION="18"
 COPY library-scripts/desktop-lite-debian.sh /tmp/library-scripts/
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 	&& bash /tmp/library-scripts/desktop-lite-debian.sh \
-	&& sed -i -E 's/.*Terminal.*/    [exec] (Terminal) { tilix -w ~ -e $(readlink -f \/proc\/$$\/exe) -il } <>/' /home/node/.fluxbox/menu \
-	&& apt-get -y install firefox-esr \
+	&& apt-get -y install chromium firefox-esr \
+        && wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+           | gpg --dearmor \
+           | dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg \
+        && echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs vscodium main' \
+           | tee /etc/apt/sources.list.d/vscodium.list \
+        && apt-get update && apt-get install codium \
 	&& bash -c ". /usr/local/share/nvm/nvm.sh && nvm alias ${VARIANT} system" \
 	&& apt-get clean -y && rm -rf /var/lib/apt/lists/* /tmp/library-scripts/
 
