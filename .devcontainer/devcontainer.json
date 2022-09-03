@@ -1,0 +1,48 @@
+{
+	"name": "VSCode & VNC",
+        "build": {
+		"dockerfile": "Dockerfile",
+		"args": { 
+			"VARIANT": "18-bullseye"
+		}
+	},
+
+	"overrideCommand": false,
+	"runArgs": [ "--init", "--security-opt", "seccomp=unconfined", "--shm-size=1g"],
+
+	"settings": {
+		"resmon.show.battery": false,
+		"resmon.show.cpufreq": false
+	},
+
+	// noVNC, VNC, Vite 
+	"forwardPorts": [6080, 5901, 3000],
+	"portsAttributes": {
+		"6080": {
+			"label": "VNC web client (noVNC)",
+			"onAutoForward": "silent"
+		},
+		"5901": {
+			"label": "VNC TCP port",
+			"onAutoForward": "silent"
+		},
+                "3000": {
+                  "label": "Vite development server",
+                  "onAutoForward": "silent"
+                }
+	},
+
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"mutantdino.resourcemonitor"
+	],
+
+	// Optionally loads a cached yarn install for the repo
+	"postCreateCommand": "cd website && pnpm install",
+
+	"remoteUser": "node",
+
+	"hostRequirements": {
+		"memory": "8gb"
+	}
+}
