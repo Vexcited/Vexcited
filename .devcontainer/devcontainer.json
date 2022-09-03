@@ -5,12 +5,11 @@
 	"overrideCommand": false,
 	"runArgs": [ "--init", "--security-opt", "seccomp=unconfined" ],
 
-  "features": {
-		    "ghcr.io/devcontainers/features/sshd:1": {
-				        "version": "latest"
-							    }
-										},
-	
+  	"features": {
+		"ghcr.io/devcontainers/features/sshd:1": {
+			"version": "latest"
+		}
+	},
 
 	// Configure tool-specific properties.
 	"customizations": {
