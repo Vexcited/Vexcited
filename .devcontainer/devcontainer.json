@@ -1,48 +1,39 @@
 {
 	"name": "VSCode & VNC",
-        "build": {
-		"dockerfile": "Dockerfile",
-		"args": { 
-			"VARIANT": "18-bullseye"
+
+	"dockerFile": "Dockerfile",
+	"overrideCommand": false,
+	"runArgs": [ "--init", "--security-opt", "seccomp=unconfined" ],
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": { 
+				"terminal.integrated.defaultProfile.linux": "zsh",
+				"resmon.show.battery": false,
+				"resmon.show.cpufreq": false,
+				"remote.extensionKind": {
+					"ms-vscode.js-debug-nightly": "workspace",
+					"msjsdiag.debugger-for-chrome": "workspace"
+				},
+				"debug.chrome.useV3": true
+			},
+			
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"dbaeumer.vscode-eslint",
+				"EditorConfig.EditorConfig",
+				"msjsdiag.debugger-for-chrome",
+				"mutantdino.resourcemonitor",
+				"GitHub.vscode-pull-request-github"
+			]
 		}
 	},
 
-	"overrideCommand": false,
-	"runArgs": [ "--init", "--security-opt", "seccomp=unconfined", "--shm-size=1g"],
-
-	"settings": {
-		"resmon.show.battery": false,
-		"resmon.show.cpufreq": false
-	},
-
-	// noVNC, VNC, Vite 
+	// noVNC, VNC, Vits ports
 	"forwardPorts": [6080, 5901, 3000],
-	"portsAttributes": {
-		"6080": {
-			"label": "VNC web client (noVNC)",
-			"onAutoForward": "silent"
-		},
-		"5901": {
-			"label": "VNC TCP port",
-			"onAutoForward": "silent"
-		},
-                "3000": {
-                  "label": "Vite development server",
-                  "onAutoForward": "silent"
-                }
-	},
 
-	"extensions": [
-		"dbaeumer.vscode-eslint",
-		"mutantdino.resourcemonitor"
-	],
-
-	// Optionally loads a cached yarn install for the repo
-	"postCreateCommand": "cd website && pnpm install",
-
-	"remoteUser": "node",
-
-	"hostRequirements": {
-		"memory": "8gb"
-	}
+	"remoteUser": "node"
 }
