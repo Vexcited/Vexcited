@@ -5,12 +5,6 @@
 	"overrideCommand": false,
 	"runArgs": [ "--init", "--security-opt", "seccomp=unconfined" ],
 
-  	"features": {
-		"ghcr.io/devcontainers/features/sshd:1": {
-			"version": "latest"
-		}
-	},
-
 	"forwardPorts": [3000],
 	"remoteUser": "node"
 }
