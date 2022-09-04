@@ -10,5 +10,5 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
         && apt-get update && apt-get install -y codium \
 	&& bash -c ". /usr/local/share/nvm/nvm.sh && nvm alias ${VARIANT} system" \
 	&& apt-get clean -y \
-        && rm -rf /var/lib/apt/lists/* \
-        && node -c "npm install -g pnpm"
+        && rm -rf /var/lib/apt/lists/*
+
