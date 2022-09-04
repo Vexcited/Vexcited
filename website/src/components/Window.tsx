@@ -24,7 +24,11 @@ const MacOSMinimize: Component<{ color: string }> = (props) => (
 
 const WindowControlButton: ParentComponent<{ color: string, action: () => unknown, showChildren: boolean }> = (props) => {
   return (
-    <button onClick={() => props.action()} class="cursor-default flex justify-center items-center h-3 w-3 rounded-full" style={`background-color: ${props.color}`}>
+    <button
+      onClick={() => props.action()}
+      class="cursor-default flex justify-center items-center h-3 w-3 rounded-full"
+      style={{ "background-color": props.color }}
+    >
       <Show when={props.showChildren}>
         {props.children}
       </Show>
