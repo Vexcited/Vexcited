@@ -15,10 +15,7 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 08 September 2022 - To: 15 September 2022
-
-Docker   1 min           █████████████████░░░░░░░░   68.08 %
-JSON     0 secs          ████████░░░░░░░░░░░░░░░░░   31.92 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
