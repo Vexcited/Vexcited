@@ -15,14 +15,14 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 13 October 2022 - To: 20 October 2022
+From: 14 October 2022 - To: 21 October 2022
 
-TypeScript   4 hrs 31 mins   ███████████████████░░░░░░   75.53 %
-JSON         30 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   08.39 %
-Vim Script   28 mins         ██░░░░░░░░░░░░░░░░░░░░░░░   07.91 %
-Markdown     16 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   04.49 %
-Bash         11 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.27 %
-gitignore    1 min           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.28 %
+TypeScript   2 hrs 46 mins   ███████████████████▒░░░░░   77.35 %
+Vim Script   28 mins         ███▒░░░░░░░░░░░░░░░░░░░░░   13.22 %
+Bash         11 mins         █▒░░░░░░░░░░░░░░░░░░░░░░░   05.47 %
+JSON         8 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   03.72 %
+Text         0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.12 %
+Markdown     0 secs          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.09 %
 ```
 
 <!--END_SECTION:waka-->
