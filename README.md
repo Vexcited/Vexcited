@@ -15,11 +15,13 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 18 October 2022 - To: 25 October 2022
+From: 19 October 2022 - To: 26 October 2022
 
-Astro        1 hr 2 mins     ████████████████████▒░░░░   80.79 %
-Git Config   6 mins          ██░░░░░░░░░░░░░░░░░░░░░░░   08.57 %
-Other        5 mins          █▓░░░░░░░░░░░░░░░░░░░░░░░   07.01 %
+TypeScript   1 hr 32 mins    █████████████░░░░░░░░░░░░   52.60 %
+Astro        1 hr 2 mins     █████████░░░░░░░░░░░░░░░░   35.47 %
+JSON         7 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   04.05 %
+Git Config   6 mins          █░░░░░░░░░░░░░░░░░░░░░░░░   03.76 %
+Other        5 mins          ▓░░░░░░░░░░░░░░░░░░░░░░░░   03.08 %
 ```
 
 <!--END_SECTION:waka-->
