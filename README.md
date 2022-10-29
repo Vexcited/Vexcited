@@ -15,11 +15,12 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 20 October 2022 - To: 27 October 2022
+From: 21 October 2022 - To: 28 October 2022
 
-TypeScript   12 hrs 6 mins   ██████████████████████░░░   88.61 %
-Astro        1 hr 2 mins     ██░░░░░░░░░░░░░░░░░░░░░░░   07.58 %
-Other        15 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.84 %
+TypeScript   20 hrs 20 mins  ███████████████████████░░   92.00 %
+Astro        1 hr 2 mins     █▒░░░░░░░░░░░░░░░░░░░░░░░   04.69 %
+JSON         20 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.54 %
+Other        15 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.14 %
 ```
 
 <!--END_SECTION:waka-->
