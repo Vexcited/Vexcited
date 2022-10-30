@@ -15,12 +15,13 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 21 October 2022 - To: 28 October 2022
+From: 22 October 2022 - To: 29 October 2022
 
-TypeScript   20 hrs 20 mins  ███████████████████████░░   92.00 %
-Astro        1 hr 2 mins     █▒░░░░░░░░░░░░░░░░░░░░░░░   04.69 %
-JSON         20 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.54 %
-Other        15 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.14 %
+TypeScript   23 hrs 2 mins   ████████████████████████░   95.67 %
+Markdown     21 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.47 %
+JSON         19 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.34 %
+Git Config   12 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.84 %
+Other        9 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.67 %
 ```
 
 <!--END_SECTION:waka-->
