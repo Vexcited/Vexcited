@@ -1,6 +1,9 @@
 import type { Component } from "solid-js";
-
 import { Index, For } from "solid-js";
+
+import { BiRegularLeftArrow } from "solid-icons/bi";
+import { IoSquareOutline } from "solid-icons/io";
+import { TbSquare } from "solid-icons/tb";
 
 import DesktopItem from "@/components/DesktopItem";
 import Window from "@/components/Window";
@@ -30,9 +33,15 @@ const Desktop: Component = () => {
       </Index>
 
       {/** Taskbar */}
-      <div class="flex p-3 fixed bottom-0 w-full h-16 bg-grey-light">
+      <div class="flex p-3 fixed bottom-0 justify-center items-center gap-14 w-full h-14 bg-grey-light">
+        <div class="md:hidden">
+          <TbSquare size={28} />
+        </div>
         <div class="h-full w-auto aspect-square">
           <img alt="vexcited's logo" src={VexcitedLogo} />
+        </div>
+        <div class="md:hidden">
+          <BiRegularLeftArrow size={26} />
         </div>
       </div>
 

@@ -7,6 +7,7 @@ import { keyboard } from "@/stores/keyboard";
 
 import { IoClose } from "solid-icons/io";
 import { HiSolidPlus, HiSolidMinus } from "solid-icons/hi";
+import {Portal} from "solid-js/web";
 
 const MacOSMaximize: Component<{ color: string }> = (props) => (
   <svg color={props.color} viewBox="0 0 26 26" fill="none" height="50%" width="50%" xmlns="http://www.w3.org/2000/svg">
@@ -65,75 +66,80 @@ const Window: Component<{ index: number }> = (props) => {
     window.addEventListener("mouseup", windowHolderMouseUp);
   };
 
-  return <Show when={current_window()}>
-    {(window) => (
-      <div
-        class="fixed shadow-xl shadow-grey-dark rounded-xl flex flex-col"
-        style={{
-          width: "250px",
-          height: "300px",
-          top: !(window.isMaximized) ? window.position.y + "px" : 0 + "px",
-          left: !(window.isMaximized) ? window.position.x + "px" : 0 + "px"
-        }}
-      >
-        <div
-          onMouseDown={windowHolderMouseDown}
-          class="px-4.5 h-11 rounded-t-xl select-none bg-grey-dark w-full flex border border-b-0 border-grey-light"
-        >
+  return (
+    <Portal>
+  
+      <Show keyed when={current_window()}>
+        {(window) => (
           <div
-            onMouseEnter={() => setControlButtonsHovered(true)}
-            onMouseLeave={() => setControlButtonsHovered(false)}
-            class="flex items-center gap-2"
+            class="fixed top-0 bottom-14 right-0 left-0 md:shadow-xl md:shadow-grey-dark md:rounded-xl flex flex-col"
+            style={{
+              /* width: "250px",
+              height: "300px",
+              top: !(window.isMaximized) ? window.position.y + "px" : 0 + "px",
+              left: !(window.isMaximized) ? window.position.x + "px" : 0 + "px"*/
+            }}
           >
-            <WindowControlButton
-              action={onWindowClose}
-              color="#FC685D"
-              showChildren={controlButtonsHovered()}
+            <div
+              onMouseDown={windowHolderMouseDown}
+              class="hidden px-4.5 h-11 rounded-t-xl select-none bg-grey-dark w-full md:flex border border-b-0 border-grey-light"
             >
-              <IoClose color="#981810" size="100%" />
-            </WindowControlButton>
-
-            <WindowControlButton
-              action={() => setOpenedWindows(props.index, "isMinimized", true)}
-              color="#FDBF45"
-              showChildren={controlButtonsHovered()}
-            >
-              <HiSolidMinus color="#9D5F1A" size="95%" />
-            </WindowControlButton>
-
-            <WindowControlButton
-              action={() => setOpenedWindows(props.index, "isMinimized", !window.isMaximized)}
-              color="#3EC54C"
-              showChildren={controlButtonsHovered()}
-            >
-              <Show
-                when={window.isMaximized}
-                fallback={
-                  <MacOSMaximize color="#10610F" />
-                }
+              <div
+                onMouseEnter={() => setControlButtonsHovered(true)}
+                onMouseLeave={() => setControlButtonsHovered(false)}
+                class="flex items-center gap-2"
               >
-                <Show
-                  when={!keyboard.alt}
-                  fallback={
-                    <HiSolidPlus color="#10610F" size="100%" />
-                  }
+                <WindowControlButton
+                  action={onWindowClose}
+                  color="#FC685D"
+                  showChildren={controlButtonsHovered()}
                 >
-                  <MacOSMinimize color="#10610F" />
-                </Show>
-              </Show>
-            </WindowControlButton>
+                  <IoClose color="#981810" size="100%" />
+                </WindowControlButton>
+
+                <WindowControlButton
+                  action={() => setOpenedWindows(props.index, "isMinimized", true)}
+                  color="#FDBF45"
+                  showChildren={controlButtonsHovered()}
+                >
+                  <HiSolidMinus color="#9D5F1A" size="95%" />
+                </WindowControlButton>
+
+                <WindowControlButton
+                  action={() => setOpenedWindows(props.index, "isMinimized", !window.isMaximized)}
+                  color="#3EC54C"
+                  showChildren={controlButtonsHovered()}
+                >
+                  <Show
+                    when={window.isMaximized}
+                    fallback={
+                      <MacOSMaximize color="#10610F" />
+                    }
+                  >
+                    <Show
+                      when={!keyboard.alt}
+                      fallback={
+                        <HiSolidPlus color="#10610F" size="100%" />
+                      }
+                    >
+                      <MacOSMinimize color="#10610F" />
+                    </Show>
+                  </Show>
+                </WindowControlButton>
+              </div>
+
+            </div>
+
+            <div class="h-full md:border md:border-t-0 border-grey-light md:rounded-b-xl bg-grey-light bg-opacity-20 backdrop-filter backdrop-blur w-full">
+              <Suspense fallback={<div>Loading...</div>}>
+                <window.component />
+              </Suspense>
+            </div>
           </div>
-
-        </div>
-
-        <div class="h-full border border-t-0 border-grey-light rounded-b-xl bg-grey-light bg-opacity-20 backdrop-filter backdrop-blur w-full">
-          <Suspense fallback={<div>Loading...</div>}>
-            <window.component />
-          </Suspense>
-        </div>
-      </div>
-    )}
-  </Show>; 
+        )}
+      </Show>
+    </Portal>
+  ); 
 };
 
 export default Window;
