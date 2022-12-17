@@ -3,6 +3,13 @@ lockfileVersion: 5.4
 specifiers:
   '@fontsource/fira-code': ^4.5.12
   '@fontsource/poppins': ^4.5.10
+  '@interactjs/actions': ^1.10.17
+  '@interactjs/auto-start': ^1.10.17
+  '@interactjs/core': ^1.10.17
+  '@interactjs/interact': ^1.10.17
+  '@interactjs/modifiers': ^1.10.17
+  '@interactjs/types': ^1.10.17
+  '@interactjs/utils': ^1.10.17
   '@types/node': ^18.11.16
   '@typescript-eslint/eslint-plugin': ^5.46.1
   '@typescript-eslint/parser': ^5.46.1
@@ -19,10 +26,17 @@ specifiers:
 dependencies:
   '@fontsource/fira-code': 4.5.12
   '@fontsource/poppins': 4.5.10
+  '@interactjs/actions': 1.10.17_farzh4kmmmdsqeu7trbjloi3zi
+  '@interactjs/auto-start': 1.10.17_farzh4kmmmdsqeu7trbjloi3zi
+  '@interactjs/core': 1.10.17_@interactjs+utils@1.10.17
+  '@interactjs/interact': 1.10.17
+  '@interactjs/modifiers': 1.10.17_farzh4kmmmdsqeu7trbjloi3zi
+  '@interactjs/utils': 1.10.17
   solid-icons: 1.0.4_solid-js@1.6.5
   solid-js: 1.6.5
 
 devDependencies:
+  '@interactjs/types': 1.10.17
   '@types/node': 18.11.16
   '@typescript-eslint/eslint-plugin': 5.46.1_imrg37k3svwu377c6q7gkarwmi
   '@typescript-eslint/parser': 5.46.1_ha6vam6werchizxrnqvarmz2zu
@@ -415,6 +429,76 @@ packages:
   /@humanwhocodes/object-schema/1.2.1:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
+
+  /@interactjs/actions/1.10.17_farzh4kmmmdsqeu7trbjloi3zi:
+    resolution: {integrity: sha512-wyB1ZqpaZy5gmz6VDqK9KWh98xKnFgL7VyLvxHODFi9V0IYX4HJAAOBlhtfze0D1R1f1cY+gqPDK+dLaHMlE+w==}
+    peerDependencies:
+      '@interactjs/core': 1.10.17
+      '@interactjs/utils': 1.10.17
+    dependencies:
+      '@interactjs/core': 1.10.17_@interactjs+utils@1.10.17
+      '@interactjs/utils': 1.10.17
+    optionalDependencies:
+      '@interactjs/interact': 1.10.17
+    dev: false
+
+  /@interactjs/auto-start/1.10.17_farzh4kmmmdsqeu7trbjloi3zi:
+    resolution: {integrity: sha512-qYVxhAbYnwxjD/NLEegUoAST7WASJ4VmWNjsyWRx/js5Op+I4E2zteARIeZGgrutcGIXMCcQzhCMgE3PjOpbpw==}
+    peerDependencies:
+      '@interactjs/core': 1.10.17
+      '@interactjs/utils': 1.10.17
+    dependencies:
+      '@interactjs/core': 1.10.17_@interactjs+utils@1.10.17
+      '@interactjs/utils': 1.10.17
+    optionalDependencies:
+      '@interactjs/interact': 1.10.17
+    dev: false
+
+  /@interactjs/core/1.10.17_@interactjs+utils@1.10.17:
+    resolution: {integrity: sha512-rL9w+83HDRuXub8Ezqs+97CYLl/ne7bLT/sAeduUWaxYhsW9iOqBoob9JnkkCZOaOsYizWI1EWy0+fNc5ibtLQ==}
+    peerDependencies:
+      '@interactjs/utils': 1.10.17
+    dependencies:
+      '@interactjs/utils': 1.10.17
+    dev: false
+
+  /@interactjs/interact/1.10.17:
+    resolution: {integrity: sha512-NyKsf8EFudvdahBjPz1Gt5QnynVwa/2LUfBc2/w8QOnOBiyzUm0HLloJSaB8a50QbQkSWN243/Lgpd8GTMQvuQ==}
+    dependencies:
+      '@interactjs/core': 1.10.17_@interactjs+utils@1.10.17
+      '@interactjs/types': 1.10.17
+      '@interactjs/utils': 1.10.17
+    dev: false
+
+  /@interactjs/modifiers/1.10.17_farzh4kmmmdsqeu7trbjloi3zi:
+    resolution: {integrity: sha512-Dxw8kv9VBIxnhNvQncR6CKAGMzKXczLvuAUIdSPFYtyerX/XiDulJUqhR+jVKNp/WjF1DvdBxWo0kGGLbM84LQ==}
+    peerDependencies:
+      '@interactjs/core': 1.10.17
+      '@interactjs/utils': 1.10.17
+    dependencies:
+      '@interactjs/core': 1.10.17_@interactjs+utils@1.10.17
+      '@interactjs/snappers': 1.10.17_@interactjs+utils@1.10.17
+      '@interactjs/utils': 1.10.17
+    optionalDependencies:
+      '@interactjs/interact': 1.10.17
+    dev: false
+
+  /@interactjs/snappers/1.10.17_@interactjs+utils@1.10.17:
+    resolution: {integrity: sha512-m753DGsNOts797e3zDT6wqELoc+BlpIC1w+TyMyISRxU6n1RlS8Q6LHBGgwAgV79LHLaahv/a5haFF9H1VG0FQ==}
+    peerDependencies:
+      '@interactjs/utils': 1.10.17
+    dependencies:
+      '@interactjs/utils': 1.10.17
+    optionalDependencies:
+      '@interactjs/interact': 1.10.17
+    dev: false
+
+  /@interactjs/types/1.10.17:
+    resolution: {integrity: sha512-X2JpoM7xUw0p9Me0tMaI0HNfcF/Hd07ZZlzpnpEMpGerUZOLoyeThrV9P+CrBHxZrluWJrigJbcdqXliFd0YMA==}
+
+  /@interactjs/utils/1.10.17:
+    resolution: {integrity: sha512-sZAW08CkqgvqRjUIaLRjScjObcCzN9D75yekLA21EClYAZIhi4A+GEt2z/WqOCOksTaEPLYmQyhkpXcboc0LhQ==}
+    dev: false
 
   /@jridgewell/gen-mapping/0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}

@@ -1,13 +1,19 @@
-import type { Component, ParentComponent } from "solid-js";
+import { Component, onMount, ParentComponent } from "solid-js";
 
 import { Show, createSignal, Suspense } from "solid-js";
 
+import "@interactjs/auto-start";
+import "@interactjs/actions/resize";
+import "@interactjs/modifiers";
+
+import interact from "@interactjs/interact";
+
 import { setOpenedWindows, openedWindows } from "@/stores/desktop";
-import { keyboard } from "@/stores/keyboard";
+import { keyboard, screen } from "@/stores/remote";
 
 import { IoClose } from "solid-icons/io";
 import { HiSolidPlus, HiSolidMinus } from "solid-icons/hi";
-import {Portal} from "solid-js/web";
+import { Dynamic } from "solid-js/web";
 
 const MacOSMaximize: Component<{ color: string }> = (props) => (
   <svg color={props.color} viewBox="0 0 26 26" fill="none" height="50%" width="50%" xmlns="http://www.w3.org/2000/svg">
@@ -40,12 +46,16 @@ const WindowControlButton: ParentComponent<{ color: string, action: () => unknow
 const Window: Component<{ index: number }> = (props) => {
   const [controlButtonsHovered, setControlButtonsHovered] = createSignal(false);
   const current_window = () => openedWindows[props.index];
+  let windowRef: HTMLDivElement | undefined;
 
   const onWindowClose = () => {
     setOpenedWindows(openedWindows.filter((_, index) => index !== props.index));
   };
 
+  const [preventWindowPosition, setPreventWindowPosition] = createSignal(false);
   const updateWindowPosition = (position: { x: number, y: number }) => {
+    if (preventWindowPosition()) return;
+
     setOpenedWindows(props.index, "position", prev => ({
       x: prev.x + position.x,
       y: prev.y + position.y
@@ -66,79 +76,104 @@ const Window: Component<{ index: number }> = (props) => {
     window.addEventListener("mouseup", windowHolderMouseUp);
   };
 
+  onMount(() => {
+    interact(windowRef).resizable({
+      edges: { top: true, left: true, bottom: true, right: true },
+      margin: 12, // Drag border allowed to drag.
+
+      listeners: {
+        move: (event) => {
+          setOpenedWindows(props.index, "position", prev => ({
+            x: prev.x + event.deltaRect.left,
+            y: prev.y + event.deltaRect.top,
+            height: event.rect.height,
+            width: event.rect.width
+          }));
+        }
+      },
+
+      modifiers: [
+        // keep the edges inside the parent
+        interact.modifiers.restrictEdges({
+          outer: "parent"
+        }),
+        interact.modifiers.restrictSize({
+          min: { width: 100, height: 50 }
+        })
+      ]
+    })
+      .on("resizestart", () => setPreventWindowPosition(true))
+      .on("resizeend", () => setPreventWindowPosition(false));
+  });
+
   return (
-    <Portal>
-  
-      <Show keyed when={current_window()}>
-        {(window) => (
-          <div
-            class="fixed top-0 bottom-14 right-0 left-0 md:shadow-xl md:shadow-grey-dark md:rounded-xl flex flex-col"
-            style={{
-              /* width: "250px",
-              height: "300px",
-              top: !(window.isMaximized) ? window.position.y + "px" : 0 + "px",
-              left: !(window.isMaximized) ? window.position.x + "px" : 0 + "px"*/
-            }}
+    <div
+      ref={windowRef}
+      class="fixed md:shadow-xl md:shadow-grey-dark md:rounded-xl flex flex-col"
+      classList={{ "bottom-14 top-0 left-0 right-0": screen.width < 768 }}
+      style={screen.width >= 768 ? {
+        width: current_window().position.width + "px",
+        height: current_window().position.height + "px",
+        transform: `translate(${current_window().position.x}px, ${current_window().position.y}px)`
+        // top: !(current_window().isMaximized) ? current_window().position.y + "px" : 0 + "px",
+        // left: !(current_window().isMaximized) ? current_window().position.x + "px" : 0 + "px"
+      } : undefined}
+    >
+      <div
+        onMouseDown={windowHolderMouseDown}
+        class="hidden px-4.5 h-11 rounded-t-xl select-none bg-grey-dark w-full md:flex border border-b-0 border-grey-light"
+      >
+        <div
+          onMouseEnter={() => setControlButtonsHovered(true)}
+          onMouseLeave={() => setControlButtonsHovered(false)}
+          class="flex items-center gap-2"
+        >
+          <WindowControlButton
+            action={onWindowClose}
+            color="#FC685D"
+            showChildren={controlButtonsHovered()}
           >
-            <div
-              onMouseDown={windowHolderMouseDown}
-              class="hidden px-4.5 h-11 rounded-t-xl select-none bg-grey-dark w-full md:flex border border-b-0 border-grey-light"
+            <IoClose color="#981810" size="100%" />
+          </WindowControlButton>
+
+          <WindowControlButton
+            action={() => setOpenedWindows(props.index, "isMinimized", true)}
+            color="#FDBF45"
+            showChildren={controlButtonsHovered()}
+          >
+            <HiSolidMinus color="#9D5F1A" size="95%" />
+          </WindowControlButton>
+
+          <WindowControlButton
+            action={() => setOpenedWindows(props.index, "isMinimized", !current_window().isMaximized)}
+            color="#3EC54C"
+            showChildren={controlButtonsHovered()}
+          >
+            <Show
+              when={current_window().isMaximized}
+              fallback={
+                <MacOSMaximize color="#10610F" />
+              }
             >
-              <div
-                onMouseEnter={() => setControlButtonsHovered(true)}
-                onMouseLeave={() => setControlButtonsHovered(false)}
-                class="flex items-center gap-2"
+              <Show
+                when={!keyboard.alt}
+                fallback={
+                  <HiSolidPlus color="#10610F" size="100%" />
+                }
               >
-                <WindowControlButton
-                  action={onWindowClose}
-                  color="#FC685D"
-                  showChildren={controlButtonsHovered()}
-                >
-                  <IoClose color="#981810" size="100%" />
-                </WindowControlButton>
+                <MacOSMinimize color="#10610F" />
+              </Show>
+            </Show>
+          </WindowControlButton>
+        </div>
+      </div>
 
-                <WindowControlButton
-                  action={() => setOpenedWindows(props.index, "isMinimized", true)}
-                  color="#FDBF45"
-                  showChildren={controlButtonsHovered()}
-                >
-                  <HiSolidMinus color="#9D5F1A" size="95%" />
-                </WindowControlButton>
-
-                <WindowControlButton
-                  action={() => setOpenedWindows(props.index, "isMinimized", !window.isMaximized)}
-                  color="#3EC54C"
-                  showChildren={controlButtonsHovered()}
-                >
-                  <Show
-                    when={window.isMaximized}
-                    fallback={
-                      <MacOSMaximize color="#10610F" />
-                    }
-                  >
-                    <Show
-                      when={!keyboard.alt}
-                      fallback={
-                        <HiSolidPlus color="#10610F" size="100%" />
-                      }
-                    >
-                      <MacOSMinimize color="#10610F" />
-                    </Show>
-                  </Show>
-                </WindowControlButton>
-              </div>
-
-            </div>
-
-            <div class="h-full md:border md:border-t-0 border-grey-light md:rounded-b-xl bg-grey-light bg-opacity-20 backdrop-filter backdrop-blur w-full">
-              <Suspense fallback={<div>Loading...</div>}>
-                <window.component />
-              </Suspense>
-            </div>
-          </div>
-        )}
-      </Show>
-    </Portal>
+      <div class="h-full md:border md:border-t-0 border-grey-light md:rounded-b-xl bg-grey-light bg-opacity-20 backdrop-filter backdrop-blur w-full">
+        <Suspense fallback={<div>Loading...</div>}>
+          <Dynamic component={current_window().component} />
+        </Suspense>
+      </div>
+    </div>
   ); 
 };
 
