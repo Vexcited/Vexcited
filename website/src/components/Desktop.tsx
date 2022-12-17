@@ -2,7 +2,6 @@ import type { Component } from "solid-js";
 import { Index, For } from "solid-js";
 
 import { BiRegularLeftArrow } from "solid-icons/bi";
-import { IoSquareOutline } from "solid-icons/io";
 import { TbSquare } from "solid-icons/tb";
 
 import DesktopItem from "@/components/DesktopItem";
@@ -17,7 +16,7 @@ const Desktop: Component = () => {
     <div class="h-screen w-screen bg-grey">
 
       {/** Desktop Icons */}
-      <div class="flex p-6">
+      <div class="flex flex-wrap p-6 gap-4">
         <For each={desktopItems}>
           {item => (
             <DesktopItem {...item} />
