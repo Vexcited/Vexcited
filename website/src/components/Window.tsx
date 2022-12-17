@@ -1,12 +1,7 @@
 import { Component, onMount, ParentComponent } from "solid-js";
 
 import { Show, createSignal, Suspense } from "solid-js";
-
-import "@interactjs/auto-start";
-import "@interactjs/actions/resize";
-import "@interactjs/modifiers";
-
-import interact from "@interactjs/interact";
+import interact from "interactjs";
 
 import { setOpenedWindows, openedWindows } from "@/stores/desktop";
 import { keyboard, screen } from "@/stores/remote";
