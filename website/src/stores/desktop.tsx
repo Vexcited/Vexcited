@@ -3,7 +3,9 @@ import type { Component } from "solid-js";
 
 import { lazy } from "solid-js";
 import { createStore } from "solid-js/store";
-import { AiFillMessage } from "solid-icons/ai";
+
+import { IoMail } from "solid-icons/io";
+import { HiSolidFolder } from "solid-icons/hi";
 
 export interface DesktopItem {
   /** Identifier, like an executable name. */
@@ -22,7 +24,10 @@ export interface OpenedWindow {
   
   position: {
     x: number,
-    y: number
+    y: number,
+
+    height: number,
+    width: number
   };
 }
 
@@ -35,7 +40,9 @@ export const createNewWindow = (desktopItemId: string, component: Component): Op
   
   position: {
     x: 0,
-    y: 0
+    y: 0,
+    height: 250,
+    width: 500
   }
 });
 
@@ -43,10 +50,20 @@ export const defaultDesktopItems: DesktopItem[] = [
   {
     id: "contact",
     name: "Contact",
-    icon: AiFillMessage,
+    icon: IoMail,
     start_action: () => {
       setOpenedWindows(
         draft => [...draft, createNewWindow("contact", lazy(() => import("@/windows/Contact")))]
+      );
+    }
+  },
+  {
+    id: "portfolio",
+    name: "Portfolio",
+    icon: HiSolidFolder,
+    start_action: () => {
+      setOpenedWindows(
+        draft => [...draft, createNewWindow("portfolio", lazy(() => import("@/windows/Portfolio")))]
       );
     }
   }
