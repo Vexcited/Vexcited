@@ -23,3 +23,21 @@ export const stopKeyboardListener = () => {
   window.removeEventListener("keydown", keyHandler);
   window.removeEventListener("keyup", keyHandler);
 };
+
+export const [screen, setScreen] = createStore({
+  width: window.innerWidth,
+  height: window.innerHeight
+});
+
+const resizeHandler = () => setScreen({
+  width: window.innerWidth,
+  height: window.innerHeight
+});
+
+export const startScreenResizeListener = () => {
+  window.addEventListener("resize", resizeHandler);
+};
+
+export const stopScreenResizeListener = () => {
+  window.removeEventListener("resize", resizeHandler);
+};

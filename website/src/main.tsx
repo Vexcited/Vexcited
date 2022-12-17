@@ -9,16 +9,26 @@ import { onMount, onCleanup } from "solid-js";
 
 import {
   startKeyboardListener,
-  stopKeyboardListener
-} from "./stores/keyboard";
+  stopKeyboardListener,
+
+  startScreenResizeListener,
+  stopScreenResizeListener
+} from "@/stores/remote";
 
 // Components
 import Desktop from "@/components/Desktop";
 
 render(
   () => {
-    onMount(() => startKeyboardListener());
-    onCleanup(() => stopKeyboardListener());
+    onMount(() => {
+      startKeyboardListener();
+      startScreenResizeListener();
+    });
+
+    onCleanup(() => {
+      stopKeyboardListener();
+      stopScreenResizeListener();
+    });
 
     return <Desktop />;
   },
