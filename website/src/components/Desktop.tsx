@@ -32,14 +32,17 @@ const Desktop: Component = () => {
       </Index>
 
       {/** Taskbar */}
-      <div class="flex p-3 fixed bottom-0 justify-center items-center gap-14 w-full h-14 bg-grey-light">
+      <div class="z-50 flex p-3 fixed bottom-0 justify-center items-center gap-14 w-full h-14 bg-grey-light">
         <div class="md:hidden">
           <TbSquare size={28} />
         </div>
         <div
           onClick={() => {
-            // If any window is currently active, make them inactive.
-            setOpenedWindows(window => window.active, "active", false);
+            // Only on mobile view
+            if (screen.width < 768) {
+              // If any window is currently in foreground, put them in background.
+              setOpenedWindows(window => window.isMinimized, "isMinimized", true);
+            }
           }}  
         >
           <img height={32} width={32} alt="vexcited's logo" src={VexcitedLogo} />
@@ -47,8 +50,8 @@ const Desktop: Component = () => {
         <div
           class="md:hidden"
           onClick={() => {
-            // If any window is currently active, close it.
-            setOpenedWindows(prev => prev.filter(window => !window.active));
+            // If any window is currently in foreground, close it.
+            setOpenedWindows(prev => prev.filter(window => !window.isMinimized));
           }}
         >
           <BiRegularLeftArrow size={26} />

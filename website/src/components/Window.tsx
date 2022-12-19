@@ -1,13 +1,13 @@
-import { Component, onMount, ParentComponent } from "solid-js";
+import { batch, Component, onMount, ParentComponent } from "solid-js";
 
 import { Show, createSignal, Suspense } from "solid-js";
 import interact from "interactjs";
 
-import { setOpenedWindows, openedWindows } from "@/stores/desktop";
-import { keyboard, screen } from "@/stores/remote";
+import { setOpenedWindows, openedWindows, setCurrentActiveWindow, currentActiveWindow } from "@/stores/desktop";
+import { screen } from "@/stores/remote";
 
+import { HiSolidMinus } from "solid-icons/hi";
 import { IoClose } from "solid-icons/io";
-import { HiSolidPlus, HiSolidMinus } from "solid-icons/hi";
 import { Dynamic } from "solid-js/web";
 
 const MacOSMaximize: Component<{ color: string }> = (props) => (
@@ -42,10 +42,6 @@ const Window: Component<{ index: number }> = (props) => {
   const [controlButtonsHovered, setControlButtonsHovered] = createSignal(false);
   const current_window = () => openedWindows[props.index];
   let windowRef: HTMLDivElement | undefined;
-
-  const onWindowClose = () => {
-    setOpenedWindows(openedWindows.filter((_, index) => index !== props.index));
-  };
 
   const [preventWindowPosition, setPreventWindowPosition] = createSignal(false);
   const updateWindowPosition = (position: { x: number, y: number }) => {
@@ -108,7 +104,8 @@ const Window: Component<{ index: number }> = (props) => {
       classList={{
         "bottom-14 top-0 left-0 right-0": screen.width < 768 || current_window().isMaximized,
         "md:(shadow-xl shadow-grey-dark rounded-xl)": !current_window().isMaximized,
-        "hidden": !current_window().active
+        "hidden": current_window().isMinimized,
+        "z-40": currentActiveWindow() === props.index
       }}
       style={screen.width >= 768 && !current_window().isMaximized ? {
         width: current_window().position.width + "px",
@@ -116,6 +113,7 @@ const Window: Component<{ index: number }> = (props) => {
         top: current_window().position.y + "px",
         left: current_window().position.x + "px"
       } : undefined}
+      onMouseDown={() => setCurrentActiveWindow(props.index)}
     >
       <div
         onMouseDown={windowHolderMouseDown}
@@ -129,42 +127,40 @@ const Window: Component<{ index: number }> = (props) => {
           onMouseLeave={() => setControlButtonsHovered(false)}
           class="flex items-center gap-2"
         >
+          {/** Close button. */}
           <WindowControlButton
-            action={onWindowClose}
             color="#FC685D"
+            action={() => batch(() => {
+              setOpenedWindows(prev => prev.filter((_, index) => index !== props.index));
+              setCurrentActiveWindow(null);
+            })}
             showChildren={controlButtonsHovered()}
           >
             <IoClose color="#981810" size="100%" />
           </WindowControlButton>
 
+          {/** Minimize button. */}
           <WindowControlButton
-            action={() => void 0}
             color="#FDBF45"
+            action={() => batch(() => {
+              setOpenedWindows(props.index, { isMinimized: true });
+              setCurrentActiveWindow(null);
+            })}
             showChildren={controlButtonsHovered()}
           >
             <HiSolidMinus color="#9D5F1A" size="95%" />
           </WindowControlButton>
 
+          {/** Maximize button. */}
           <WindowControlButton
-            action={() => setOpenedWindows(props.index, "isMaximized", prev => !prev)}
             color="#3EC54C"
+            action={() => setOpenedWindows(props.index, "isMaximized", prev => !prev)}
             showChildren={controlButtonsHovered()}
           >
-            <Show
-              when={current_window().isMaximized}
-              fallback={
-                <MacOSMaximize color="#10610F" />
-              }
-            >
-              <Show
-                when={!keyboard.alt}
-                fallback={
-                  <HiSolidPlus color="#10610F" size="100%" />
-                }
-              >
-                <MacOSMinimize color="#10610F" />
-              </Show>
-            </Show>
+            {current_window().isMaximized
+              ? <MacOSMinimize color="#10610F" />
+              : <MacOSMaximize color="#10610F" />
+            }
           </WindowControlButton>
         </div>
       </div>
