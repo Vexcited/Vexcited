@@ -20,7 +20,7 @@ export interface OpenedWindow {
   component: Component;
   
   isMaximized: boolean;
-  isMinimized: boolean;
+  active: boolean;
   
   position: {
     x: number,
@@ -36,7 +36,7 @@ export const createNewWindow = (desktopItemId: string, component: Component): Op
   component,
 
   isMaximized: false,
-  isMinimized: false,
+  active: true,
   
   position: {
     x: 0,

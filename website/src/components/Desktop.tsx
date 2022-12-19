@@ -7,7 +7,7 @@ import { TbSquare } from "solid-icons/tb";
 import DesktopItem from "@/components/DesktopItem";
 import Window from "@/components/Window";
 
-import { desktopItems, openedWindows } from "@/stores/desktop";
+import { desktopItems, openedWindows, setOpenedWindows } from "@/stores/desktop";
 
 import VexcitedLogo from "@/assets/logo.svg";
 
@@ -36,10 +36,22 @@ const Desktop: Component = () => {
         <div class="md:hidden">
           <TbSquare size={28} />
         </div>
-        <div class="h-full w-auto aspect-square">
+        <div
+          class="h-full w-auto aspect-square"
+          onClick={() => {
+            // If any window is currently active, make them inactive.
+            setOpenedWindows(window => window.active, "active", false);
+          }}  
+        >
           <img alt="vexcited's logo" src={VexcitedLogo} />
         </div>
-        <div class="md:hidden">
+        <div
+          class="md:hidden"
+          onClick={() => {
+            // If any window is currently active, close it.
+            setOpenedWindows(prev => prev.filter(window => !window.active));
+          }}
+        >
           <BiRegularLeftArrow size={26} />
         </div>
       </div>

@@ -104,18 +104,25 @@ const Window: Component<{ index: number }> = (props) => {
   return (
     <div
       ref={windowRef}
-      class="fixed md:shadow-xl md:shadow-grey-dark md:rounded-xl flex flex-col"
-      classList={{ "bottom-14 top-0 left-0 right-0": screen.width < 768 }}
-      style={screen.width >= 768 ? {
+      class="fixed flex flex-col"
+      classList={{
+        "bottom-14 top-0 left-0 right-0": screen.width < 768 || current_window().isMaximized,
+        "md:(shadow-xl shadow-grey-dark rounded-xl)": !current_window().isMaximized,
+        "hidden": !current_window().active
+      }}
+      style={screen.width >= 768 && !current_window().isMaximized ? {
         width: current_window().position.width + "px",
         height: current_window().position.height + "px",
-        top: !(current_window().isMaximized) ? current_window().position.y + "px" : 0 + "px",
-        left: !(current_window().isMaximized) ? current_window().position.x + "px" : 0 + "px"
+        top: current_window().position.y + "px",
+        left: current_window().position.x + "px"
       } : undefined}
     >
       <div
         onMouseDown={windowHolderMouseDown}
-        class="hidden px-4.5 h-11 rounded-t-xl select-none bg-grey-dark w-full md:flex border border-b-0 border-grey-light"
+        class="hidden md:flex px-4.5 h-11 select-none bg-grey-dark w-full"
+        classList={{
+          "md:(rounded-t-xl border border-b-0 border-grey-light)": !current_window().isMaximized
+        }}
       >
         <div
           onMouseEnter={() => setControlButtonsHovered(true)}
@@ -131,7 +138,7 @@ const Window: Component<{ index: number }> = (props) => {
           </WindowControlButton>
 
           <WindowControlButton
-            action={() => setOpenedWindows(props.index, "isMinimized", true)}
+            action={() => void 0}
             color="#FDBF45"
             showChildren={controlButtonsHovered()}
           >
@@ -139,7 +146,7 @@ const Window: Component<{ index: number }> = (props) => {
           </WindowControlButton>
 
           <WindowControlButton
-            action={() => setOpenedWindows(props.index, "isMinimized", !current_window().isMaximized)}
+            action={() => setOpenedWindows(props.index, "isMaximized", prev => !prev)}
             color="#3EC54C"
             showChildren={controlButtonsHovered()}
           >
@@ -162,7 +169,11 @@ const Window: Component<{ index: number }> = (props) => {
         </div>
       </div>
 
-      <div class="h-full md:border md:border-t-0 border-grey-light md:rounded-b-xl bg-grey w-full overflow-y-auto">
+      <div class="h-full bg-grey w-full overflow-y-auto"
+        classList={{
+          "md:(border border-t-0 border-grey-light rounded-b-xl)": !current_window().isMaximized
+        }}
+      >
         <Suspense fallback={<div>Loading...</div>}>
           <Dynamic component={current_window().component} />
         </Suspense>
