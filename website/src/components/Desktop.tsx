@@ -37,13 +37,12 @@ const Desktop: Component = () => {
           <TbSquare size={28} />
         </div>
         <div
-          class="h-full w-auto aspect-square"
           onClick={() => {
             // If any window is currently active, make them inactive.
             setOpenedWindows(window => window.active, "active", false);
           }}  
         >
-          <img alt="vexcited's logo" src={VexcitedLogo} />
+          <img height={32} width={32} alt="vexcited's logo" src={VexcitedLogo} />
         </div>
         <div
           class="md:hidden"
