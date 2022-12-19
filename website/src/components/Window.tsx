@@ -109,9 +109,8 @@ const Window: Component<{ index: number }> = (props) => {
       style={screen.width >= 768 ? {
         width: current_window().position.width + "px",
         height: current_window().position.height + "px",
-        transform: `translate(${current_window().position.x}px, ${current_window().position.y}px)`
-        // top: !(current_window().isMaximized) ? current_window().position.y + "px" : 0 + "px",
-        // left: !(current_window().isMaximized) ? current_window().position.x + "px" : 0 + "px"
+        top: !(current_window().isMaximized) ? current_window().position.y + "px" : 0 + "px",
+        left: !(current_window().isMaximized) ? current_window().position.x + "px" : 0 + "px"
       } : undefined}
     >
       <div
@@ -163,7 +162,7 @@ const Window: Component<{ index: number }> = (props) => {
         </div>
       </div>
 
-      <div class="h-full md:border md:border-t-0 border-grey-light md:rounded-b-xl bg-grey-light bg-opacity-20 backdrop-filter backdrop-blur w-full">
+      <div class="h-full md:border md:border-t-0 border-grey-light md:rounded-b-xl bg-grey w-full overflow-y-auto">
         <Suspense fallback={<div>Loading...</div>}>
           <Dynamic component={current_window().component} />
         </Suspense>
