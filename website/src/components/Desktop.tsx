@@ -1,15 +1,20 @@
 import type { Component } from "solid-js";
-import { Index, For, Show } from "solid-js";
+import { Index, For, Show, batch } from "solid-js";
 
 import { BiRegularLeftArrow } from "solid-icons/bi";
 import { TbSquare } from "solid-icons/tb";
 
+import VexcitedLogo from "@/assets/logo.svg";
+
 import DesktopItem from "@/components/DesktopItem";
 import Window from "@/components/Window";
 
-import { currentActiveWindow, desktopItems, openedWindows, setCurrentActiveWindow, setOpenedWindows } from "@/stores/desktop";
-
-import VexcitedLogo from "@/assets/logo.svg";
+import {
+  currentActiveWindow,
+  desktopItems, openedWindows,
+  
+  setCurrentActiveWindow, setOpenedWindows
+} from "@/stores/desktop";
 
 const Desktop: Component = () => {
   return (
@@ -62,12 +67,15 @@ const Desktop: Component = () => {
             <For each={openedWindows}>
               {(window, index) => (
                 <button
-                  class="p-2 rounded-lg bg-grey"
+                  class="p-2 rounded-lg border bg-grey"
                   classList={{
-                    "bg-opacity-100": index() === currentActiveWindow(),
-                    "bg-opacity-40": index() !== currentActiveWindow()
+                    "bg-opacity-100 border-blue": index() === currentActiveWindow(),
+                    "bg-opacity-40 border-transparent": index() !== currentActiveWindow()
                   }}
-                  onClick={() => setCurrentActiveWindow(index())}
+                  onClick={() => batch(() => {
+                    setCurrentActiveWindow(index());
+                    setOpenedWindows(index(), { isMinimized: false });
+                  })}
                 >
                   <window.app.icon size={24} />
                 </button>
