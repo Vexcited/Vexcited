@@ -89,7 +89,7 @@ const Window: Component<{ index: number }> = (props) => {
           outer: "parent"
         }),
         interact.modifiers.restrictSize({
-          min: { width: 100, height: 50 }
+          min: { width: 300, height: 150 }
         })
       ]
     })
