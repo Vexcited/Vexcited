@@ -9,6 +9,8 @@ import VexcitedLogo from "@/assets/logo.svg";
 import DesktopItem from "@/components/DesktopItem";
 import Window from "@/components/Window";
 
+import { screen } from "@/stores/remote";
+
 import {
   currentActiveWindow,
   desktopItems, openedWindows,
@@ -45,8 +47,11 @@ const Desktop: Component = () => {
           onClick={() => {
             // Only on mobile view
             if (screen.width < 768) {
-              // If any window is currently in foreground, put them in background.
-              setOpenedWindows(window => window.isMinimized, "isMinimized", true);
+              batch(() => {
+                // If any window is currently in foreground, put them in background.
+                setOpenedWindows(window => !window.isMinimized, { isMinimized: true });
+                setCurrentActiveWindow(null);
+              });
             }
           }}  
         >
@@ -55,8 +60,10 @@ const Desktop: Component = () => {
         <div
           class="md:hidden"
           onClick={() => {
-            // If any window is currently in foreground, close it.
-            setOpenedWindows(prev => prev.filter(window => !window.isMinimized));
+            if (currentActiveWindow() !== null) {
+              // Close current active window.
+              setOpenedWindows(prev => prev.filter((_, index) => index !== currentActiveWindow()));
+            } 
           }}
         >
           <BiRegularLeftArrow size={26} />
