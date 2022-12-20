@@ -42,33 +42,36 @@ const Window: Component<{ index: number }> = (props) => {
   const [controlButtonsHovered, setControlButtonsHovered] = createSignal(false);
   const current_window = () => openedWindows[props.index];
   let windowRef: HTMLDivElement | undefined;
+  let windowTitleRef: HTMLDivElement | undefined;
 
-  const [preventWindowPosition, setPreventWindowPosition] = createSignal(false);
   const updateWindowPosition = (position: { x: number, y: number }) => {
-    if (preventWindowPosition()) return;
-
     setOpenedWindows(props.index, "position", prev => ({
       x: prev.x + position.x,
       y: prev.y + position.y
     }));
   };
-  
-  const windowHolderMouseMove = (e: MouseEvent) => {
-    updateWindowPosition({ x: e.movementX, y: e.movementY });
-  };
-
-  const windowHolderMouseUp = () => {
-    window.removeEventListener("mousemove", windowHolderMouseMove);
-    window.removeEventListener("mouseup", windowHolderMouseUp);
-  };
-
-  const windowHolderMouseDown = () => {
-    window.addEventListener("mousemove", windowHolderMouseMove);
-    window.addEventListener("mouseup", windowHolderMouseUp);
-  };
 
   onMount(() => {
-    interact(windowRef).resizable({
+    interact(windowRef).draggable({
+      allowFrom: windowTitleRef,
+      // Don't set a cursor for drag actions.
+      cursorChecker: () => null,
+
+      listeners: {
+        move: (event) => {
+          updateWindowPosition({ x: event.dx, y: event.dy });
+        }
+      },
+
+      modifiers: [
+        interact.modifiers.restrict({
+          restriction: "parent",
+          elementRect: { top: 0, left: 0, bottom: 1, right: 1 },
+          offset: { top: 0, right: 0, left: 0, bottom: 56 /** Note: Taskbar is 56px. */ },
+          endOnly: false
+        })
+      ]
+    }).resizable({
       edges: { top: true, left: true, bottom: true, right: true },
       margin: 12, // Drag border allowed to drag.
 
@@ -92,9 +95,7 @@ const Window: Component<{ index: number }> = (props) => {
           min: { width: 300, height: 150 }
         })
       ]
-    })
-      .on("resizestart", () => setPreventWindowPosition(true))
-      .on("resizeend", () => setPreventWindowPosition(false));
+    });
   });
 
   return (
@@ -116,7 +117,7 @@ const Window: Component<{ index: number }> = (props) => {
       onMouseDown={() => setCurrentActiveWindow(props.index)}
     >
       <div
-        onMouseDown={windowHolderMouseDown}
+        ref={windowTitleRef}
         class="hidden relative md:flex px-4.5 h-11 select-none bg-grey-dark w-full"
         classList={{
           "md:(rounded-t-xl border border-b-0 border-grey-light)": !current_window().isMaximized
