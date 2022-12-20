@@ -1,5 +1,5 @@
 import type { Component } from "solid-js";
-import { Index, For } from "solid-js";
+import { Index, For, Show } from "solid-js";
 
 import { BiRegularLeftArrow } from "solid-icons/bi";
 import { TbSquare } from "solid-icons/tb";
@@ -7,7 +7,7 @@ import { TbSquare } from "solid-icons/tb";
 import DesktopItem from "@/components/DesktopItem";
 import Window from "@/components/Window";
 
-import { desktopItems, openedWindows, setOpenedWindows } from "@/stores/desktop";
+import { currentActiveWindow, desktopItems, openedWindows, setCurrentActiveWindow, setOpenedWindows } from "@/stores/desktop";
 
 import VexcitedLogo from "@/assets/logo.svg";
 
@@ -32,7 +32,7 @@ const Desktop: Component = () => {
       </Index>
 
       {/** Taskbar */}
-      <div class="z-50 flex p-3 fixed bottom-0 justify-center items-center gap-14 w-full h-14 bg-grey-light">
+      <div class="z-50 flex p-3 fixed bottom-0 justify-center md:justify-start items-center gap-14 md:gap-8 w-full h-14 bg-grey-light">
         <div class="md:hidden">
           <TbSquare size={28} />
         </div>
@@ -56,8 +56,26 @@ const Desktop: Component = () => {
         >
           <BiRegularLeftArrow size={26} />
         </div>
-      </div>
 
+        <Show when={screen.width >= 768}>
+          <div class="flex gap-2">
+            <For each={openedWindows}>
+              {(window, index) => (
+                <button
+                  class="p-2 rounded-lg bg-grey"
+                  classList={{
+                    "bg-opacity-100": index() === currentActiveWindow(),
+                    "bg-opacity-40": index() !== currentActiveWindow()
+                  }}
+                  onClick={() => setCurrentActiveWindow(index())}
+                >
+                  <window.app.icon size={24} />
+                </button>
+              )}
+            </For>
+          </div>
+        </Show>
+      </div>
     </div>
   );
 };

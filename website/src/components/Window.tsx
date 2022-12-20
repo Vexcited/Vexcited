@@ -117,7 +117,7 @@ const Window: Component<{ index: number }> = (props) => {
     >
       <div
         onMouseDown={windowHolderMouseDown}
-        class="hidden md:flex px-4.5 h-11 select-none bg-grey-dark w-full"
+        class="hidden relative md:flex px-4.5 h-11 select-none bg-grey-dark w-full"
         classList={{
           "md:(rounded-t-xl border border-b-0 border-grey-light)": !current_window().isMaximized
         }}
@@ -163,6 +163,8 @@ const Window: Component<{ index: number }> = (props) => {
             }
           </WindowControlButton>
         </div>
+
+        <span class="pointer-events-none absolute right-0 left-0 h-full flex justify-center items-center">{current_window().app.name}</span>
       </div>
 
       <div class="h-full bg-grey w-full overflow-y-auto"
@@ -171,7 +173,7 @@ const Window: Component<{ index: number }> = (props) => {
         }}
       >
         <Suspense fallback={<div>Loading...</div>}>
-          <Dynamic component={current_window().component} />
+          <Dynamic component={current_window().app.component} />
         </Suspense>
       </div>
     </div>

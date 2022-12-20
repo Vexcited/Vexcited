@@ -9,17 +9,20 @@ import { HiSolidFolder } from "solid-icons/hi";
 
 import { screen } from "@/stores/remote";
 
-export interface DesktopItem {
+export interface Application {
   /** Identifier, like an executable name. */
   id: string;
   name: string;
   icon: IconTypes;
-  start_action: () => unknown;
+  component: Component;
+}
+
+export interface DesktopItem extends Application {
+  start_action: () => void;
 }
 
 export interface OpenedWindow {
-  desktopItemId: string;
-  component: Component;
+  app: Application;
   
   isMaximized: boolean;
   isMinimized: boolean;
@@ -33,7 +36,7 @@ export interface OpenedWindow {
   };
 }
 
-export const createNewWindowObject = (desktopItemId: string, component: Component): OpenedWindow => {
+export const createNewWindowObject = (app: Application): OpenedWindow => {
   // Note: Taskbar takes 56px at the bottom of the screen. 
   const TASKBAR_HEIGHT = 56;
   
@@ -42,8 +45,7 @@ export const createNewWindowObject = (desktopItemId: string, component: Componen
   const width = screen.width - 200;
 
   return {
-    desktopItemId,
-    component,
+    app,
 
     isMaximized: false,
     isMinimized: false,
@@ -59,26 +61,30 @@ export const createNewWindowObject = (desktopItemId: string, component: Componen
   };
 };
 
-export const openNewWindow = (desktopItemId: string, component: Component) => {
-  setOpenedWindows(draft => [...draft, createNewWindowObject(desktopItemId, component)]);
+export const openNewWindow = (app: Application) => {
+  setOpenedWindows(draft => [...draft, createNewWindowObject(app)]);
   setCurrentActiveWindow(openedWindows.length - 1);
 };
 
-export const defaultDesktopItems: DesktopItem[] = [
+export const applications: Application[] = [
   {
     id: "contact",
     name: "Contact",
     icon: IoMail,
-    start_action: () => openNewWindow("contact", lazy(() => import("@/windows/Contact")))
+    component: lazy(() => import("@/windows/Contact"))
   },
   {
     id: "portfolio",
     name: "Portfolio",
     icon: HiSolidFolder,
-    start_action: () => openNewWindow("portfolio", lazy(() => import("@/windows/Portfolio")))
+    component: lazy(() => import("@/windows/Portfolio"))
   }
 ];
 
-export const [desktopItems, setDesktopItems] = createStore<DesktopItem[]>(defaultDesktopItems);
+export const desktopItems: DesktopItem[] = applications.map(app => ({
+  ...app,
+  start_action: () => openNewWindow(app)
+}));
+
 export const [openedWindows, setOpenedWindows] = createStore<OpenedWindow[]>([]);
 export const [currentActiveWindow, setCurrentActiveWindow] = createSignal<number | null>(null);
