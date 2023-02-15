@@ -15,12 +15,9 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 06 February 2023 - To: 13 February 2023
+From: 07 February 2023 - To: 14 February 2023
 
-TypeScript   3 hrs 43 mins   ████████████████████▒░░░░   81.75 %
-sh           43 mins         ████░░░░░░░░░░░░░░░░░░░░░   15.99 %
-JSON         4 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.74 %
-JavaScript   1 min           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.52 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
