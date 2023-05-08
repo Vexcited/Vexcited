@@ -15,13 +15,13 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 29 April 2023 - To: 06 May 2023
+From: 30 April 2023 - To: 07 May 2023
 
-TypeScript   12 hrs 27 mins  ██████████████████░░░░░░░   72.63 %
-Rust         1 hr 54 mins    ██▓░░░░░░░░░░░░░░░░░░░░░░   11.11 %
-TOML         38 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.73 %
-Python       36 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.57 %
-JavaScript   26 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.57 %
+TypeScript   11 hrs 57 mins  ██████████████████░░░░░░░   71.70 %
+Rust         1 hr 54 mins    ███░░░░░░░░░░░░░░░░░░░░░░   11.43 %
+TOML         38 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.84 %
+Python       36 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.67 %
+JavaScript   26 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.64 %
 ```
 
 <!--END_SECTION:waka-->
