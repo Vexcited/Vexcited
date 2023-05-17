@@ -15,13 +15,13 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 08 May 2023 - To: 15 May 2023
+From: 09 May 2023 - To: 16 May 2023
 
-TypeScript   15 hrs 31 mins  ██████████████▓░░░░░░░░░░   58.75 %
-Rust         7 hrs 29 mins   ███████░░░░░░░░░░░░░░░░░░   28.34 %
-Markdown     1 hr 32 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   05.82 %
-HTML         1 hr 17 mins    █▒░░░░░░░░░░░░░░░░░░░░░░░   04.91 %
-JavaScript   10 mins         ░░░░░░░░░░░░░░░░░░░░░░░░░   00.66 %
+TypeScript   14 hrs 53 mins  ██████████████▓░░░░░░░░░░   58.16 %
+Rust         7 hrs 29 mins   ███████▒░░░░░░░░░░░░░░░░░   29.27 %
+Markdown     2 hrs 33 mins   ██▓░░░░░░░░░░░░░░░░░░░░░░   10.01 %
+JavaScript   10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.68 %
+JSON         8 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.56 %
 ```
 
 <!--END_SECTION:waka-->
