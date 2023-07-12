@@ -15,13 +15,13 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 03 July 2023 - To: 10 July 2023
+From: 04 July 2023 - To: 11 July 2023
 
-TypeScript   13 hrs 7 mins   ████████████████▓░░░░░░░░   66.18 %
-Astro        4 hrs 9 mins    █████▒░░░░░░░░░░░░░░░░░░░   20.95 %
-MDX          1 hr 17 mins    █▓░░░░░░░░░░░░░░░░░░░░░░░   06.53 %
-Bash         16 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.35 %
-JavaScript   13 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.12 %
+TypeScript   17 hrs 53 mins  ████████████████████▒░░░░   81.61 %
+Astro        3 hrs 25 mins   ████░░░░░░░░░░░░░░░░░░░░░   15.63 %
+Bash         16 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.28 %
+JavaScript   9 mins          ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.70 %
+MDX          4 mins          ░░░░░░░░░░░░░░░░░░░░░░░░░   00.33 %
 ```
 
 <!--END_SECTION:waka-->
