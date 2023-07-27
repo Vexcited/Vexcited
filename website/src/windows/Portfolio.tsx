@@ -41,8 +41,8 @@ const PROJECTS: {
     name: "Pokaimon",
     type: "app",
     description: "Collaborated with 2 people to build a Genshin Impact themed collectible game with mechanics similar to Pokémon, made for the Supabase Launch Week 5 Hackathon.",
-    github_repo: "trobonox/pokaimon",
-    website_url: "https://pokaimon.moe/"
+    github_repo: "catto-labs/pokaimon",
+    website_url: "https://pokaimon.cattolabs.com/"
   },
   {
     name: "discord-alexa-skill",
