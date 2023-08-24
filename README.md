@@ -15,13 +15,13 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 14 August 2023 - To: 21 August 2023
+From: 15 August 2023 - To: 22 August 2023
 
-TypeScript       17 hrs 31 mins  ██████████████████████▒░░   89.68 %
-TSConfig         31 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.70 %
-JSON             28 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.47 %
-YAML             12 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   01.05 %
-Ezhil            10 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.87 %
+TypeScript       19 hrs 33 mins  ███████████████████░░░░░░   75.66 %
+Other            3 hrs 35 mins   ███▒░░░░░░░░░░░░░░░░░░░░░   13.92 %
+JSON             53 mins         █░░░░░░░░░░░░░░░░░░░░░░░░   03.47 %
+TSConfig         31 mins         ▓░░░░░░░░░░░░░░░░░░░░░░░░   02.04 %
+Bash             13 mins         ▒░░░░░░░░░░░░░░░░░░░░░░░░   00.84 %
 ```
 
 <!--END_SECTION:waka-->
