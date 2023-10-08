@@ -10,7 +10,7 @@
 
 - 👀 I currently work on [lpadder](https://github.com/Vexcited/lpadder) and [SolidCord](https://github.com/Vexcited/SolidCord).
 
-## WakaTime ⏱
+## WakaTime ⏱ Total @ [![wakatime](https://wakatime.com/badge/user/0839e595-e07a-435c-8d59-ed95f2a3d6dd.svg)](https://wakatime.com/@0839e595-e07a-435c-8d59-ed95f2a3d6dd)
 
 <!--START_SECTION:waka-->
 
