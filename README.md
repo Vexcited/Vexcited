@@ -25,7 +25,3 @@ Markdown       58 mins         ▒░░░░░░░░░░░░░░░�
 ```
 
 <!--END_SECTION:waka-->
-
-## Sponsors
-
-I don't have any sponsor actually, come back later if you want to sponsor me !
