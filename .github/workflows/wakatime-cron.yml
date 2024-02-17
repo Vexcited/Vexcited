@@ -14,5 +14,10 @@ jobs:
       - uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          COMMIT_MESSAGE: Updated WakaTime
+          COMMIT_MESSAGE: "chore: updated WakaTime"
+          IGNORED_LANGUAGES: Other
+          BLOCKS: -#
+          TIME_RANGE: last_30_days
+          AUTHOR_NAME: Mikkel RINGAUD
+          AUTHOR_EMAIL: mikkel@milescode.dev
           SHOW_TITLE: true
