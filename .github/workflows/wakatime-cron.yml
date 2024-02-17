@@ -21,3 +21,5 @@ jobs:
           AUTHOR_NAME: Mikkel RINGAUD
           AUTHOR_EMAIL: mikkel@milescode.dev
           SHOW_TITLE: true
+          LANG_COUNT: 6
+          CODE_LANG: plain
