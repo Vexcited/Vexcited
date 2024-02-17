@@ -14,7 +14,7 @@
 
 <!--START_SECTION:waka-->
 
-```txt
+```
 From: 17 January 2024 - To: 16 February 2024
 
 TypeScript        83 hrs 58 mins  ########-----------------   33.64 %
