@@ -14,13 +14,14 @@
 
 <!--START_SECTION:waka-->
 
-```
+```plain
 From: 17 January 2024 - To: 16 February 2024
 
 TypeScript        83 hrs 58 mins  ########-----------------   33.64 %
 Markdown          8 hrs 27 mins   #------------------------   03.39 %
 JavaScript        4 hrs 23 mins   -------------------------   01.76 %
 Rust              3 hrs 44 mins   -------------------------   01.50 %
+JSON              1 hr 58 mins    -------------------------   00.79 %
 ```
 
 <!--END_SECTION:waka-->
