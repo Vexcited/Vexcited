@@ -52,10 +52,12 @@ const Window: Component<{ index: number }> = (props) => {
   };
 
   onMount(() => {
+    if (!windowRef) return;
+
     interact(windowRef).draggable({
       allowFrom: windowTitleRef,
       // Don't set a cursor for drag actions.
-      cursorChecker: () => null,
+      cursorChecker: () => "default",
 
       listeners: {
         move: (event) => {
