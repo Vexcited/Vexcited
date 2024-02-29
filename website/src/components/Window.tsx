@@ -103,11 +103,12 @@ const Window: Component<{ index: number }> = (props) => {
   return (
     <div
       ref={windowRef}
-      class="fixed flex flex-col"
+      class="flex flex-col"
       classList={{
         "bottom-14 top-0 left-0 right-0": screen.width < 768 || current_window().isMaximized,
         "md:(shadow-xl shadow-grey-dark rounded-xl)": !current_window().isMaximized,
         "hidden": current_window().isMinimized,
+        "fixed": !current_window().isMinimized,
         "z-40": currentActiveWindow() === props.index
       }}
       style={screen.width >= 768 && !current_window().isMaximized ? {
@@ -115,7 +116,7 @@ const Window: Component<{ index: number }> = (props) => {
         height: current_window().position.height + "px",
         top: current_window().position.y + "px",
         left: current_window().position.x + "px"
-      } : undefined}
+      } : void 0}
       onMouseDown={() => setCurrentActiveWindow(props.index)}
     >
       <div
