@@ -6,9 +6,9 @@ export default defineConfig({
   theme: {
     colors: {
       grey: {
-        dark: "#2E3440",
-        DEFAULT: "#3B4252",
-        light: "#434C5E"
+        dark: "#232634",
+        DEFAULT: "#303446",
+        light: "#363a4f"
       },
       white: {
         dark: "#D8DEE9",
@@ -16,9 +16,9 @@ export default defineConfig({
         light: "#ECEFF4"
       },
       blue: {
-        dark: "#5E81AC",
-        DEFAULT: "#88C0D0",
-        light: "#8FBCBB"
+        dark: "#8839ef",
+        DEFAULT: "#c6a0f6",
+        light: "#b7bdf8"
       }
     },
 
