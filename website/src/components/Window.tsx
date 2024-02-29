@@ -103,12 +103,12 @@ const Window: Component<{ index: number }> = (props) => {
   return (
     <div
       ref={windowRef}
-      class="flex flex-col"
+      class="fixed flex-col"
       classList={{
         "bottom-14 top-0 left-0 right-0": screen.width < 768 || current_window().isMaximized,
         "md:(shadow-xl shadow-grey-dark rounded-xl)": !current_window().isMaximized,
         "hidden": current_window().isMinimized,
-        "fixed": !current_window().isMinimized,
+        "flex": !current_window().isMinimized,
         "z-40": currentActiveWindow() === props.index
       }}
       style={screen.width >= 768 && !current_window().isMaximized ? {
