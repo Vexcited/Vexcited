@@ -15,13 +15,13 @@
 <!--START_SECTION:waka-->
 
 ```plain
-From: 27 January 2024 - To: 26 February 2024
+From: 28 January 2024 - To: 27 February 2024
 
-TypeScript        60 hrs 41 mins  #######------------------   26.42 %
-Markdown          6 hrs 14 mins   #------------------------   02.72 %
-Rust              2 hrs 24 mins   -------------------------   01.05 %
-JavaScript        2 hrs 17 mins   -------------------------   00.99 %
-C                 2 hrs 15 mins   -------------------------   00.98 %
+TypeScript        59 hrs 23 mins  ######-------------------   25.94 %
+Markdown          6 hrs 21 mins   #------------------------   02.78 %
+JavaScript        2 hrs 19 mins   -------------------------   01.01 %
+C                 2 hrs 15 mins   -------------------------   00.99 %
+Rust              1 hr 41 mins    -------------------------   00.74 %
 ```
 
 <!--END_SECTION:waka-->
