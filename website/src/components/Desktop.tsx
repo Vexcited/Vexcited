@@ -14,7 +14,7 @@ import { screen } from "@/stores/remote";
 import {
   currentActiveWindow,
   desktopItems, openedWindows,
-  
+
   setCurrentActiveWindow, setOpenedWindows
 } from "@/stores/desktop";
 
@@ -25,7 +25,7 @@ const Desktop: Component = () => {
       {/** Desktop Icons */}
       <div class="flex flex-wrap p-6 gap-4">
         <For each={desktopItems}>
-          {item => (
+          {(item) => (
             <DesktopItem {...item} />
           )}
         </For>
@@ -49,11 +49,11 @@ const Desktop: Component = () => {
             if (screen.width < 768) {
               batch(() => {
                 // If any window is currently in foreground, put them in background.
-                setOpenedWindows(window => !window.isMinimized, { isMinimized: true });
+                setOpenedWindows((window) => !window.isMinimized, { isMinimized: true });
                 setCurrentActiveWindow(null);
               });
             }
-          }}  
+          }}
         >
           <img height={32} width={32} alt="vexcited's logo" src={VexcitedLogo} />
         </div>
@@ -62,8 +62,8 @@ const Desktop: Component = () => {
           onClick={() => {
             if (currentActiveWindow() !== null) {
               // Close current active window.
-              setOpenedWindows(prev => prev.filter((_, index) => index !== currentActiveWindow()));
-            } 
+              setOpenedWindows((prev) => prev.filter((_, index) => index !== currentActiveWindow()));
+            }
           }}
         >
           <BiRegularLeftArrow size={26} />

@@ -2,13 +2,10 @@ import { defineConfig } from "vite";
 import path from "path";
 
 import solid from "vite-plugin-solid";
-import windicss from "vite-plugin-windicss";
+import unocss from "unocss/vite";
 
 export default defineConfig({
-  plugins: [
-    solid(),
-    windicss()
-  ],
+  plugins: [unocss(), solid()],
 
   resolve: {
     alias: {
@@ -17,10 +14,7 @@ export default defineConfig({
   },
 
   server: {
+    strictPort: true,
     port: 3000
-  },
-
-  build: {
-    target: "esnext"
   }
 });

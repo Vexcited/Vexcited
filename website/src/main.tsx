@@ -1,10 +1,10 @@
 /* @refresh reload */
 import "@fontsource/poppins";
 import "@fontsource/fira-code";
-import "virtual:windi.css";
+import "@unocss/reset/tailwind.css";
+import "virtual:uno.css";
 
 import { render } from "solid-js/web";
-
 import { onMount, onCleanup } from "solid-js";
 
 import {

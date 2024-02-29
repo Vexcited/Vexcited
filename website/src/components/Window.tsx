@@ -45,7 +45,7 @@ const Window: Component<{ index: number }> = (props) => {
   let windowTitleRef: HTMLDivElement | undefined;
 
   const updateWindowPosition = (position: { x: number, y: number }) => {
-    setOpenedWindows(props.index, "position", prev => ({
+    setOpenedWindows(props.index, "position", (prev) => ({
       x: prev.x + position.x,
       y: prev.y + position.y
     }));
@@ -77,7 +77,7 @@ const Window: Component<{ index: number }> = (props) => {
 
       listeners: {
         move: (event) => {
-          setOpenedWindows(props.index, "position", prev => ({
+          setOpenedWindows(props.index, "position", (prev) => ({
             x: prev.x + event.deltaRect.left,
             y: prev.y + event.deltaRect.top,
             height: event.rect.height,
@@ -132,7 +132,8 @@ const Window: Component<{ index: number }> = (props) => {
           <WindowControlButton
             color="#FC685D"
             action={() => batch(() => {
-              setOpenedWindows(prev => prev.filter((_, index) => index !== props.index));
+              // eslint-disable-next-line solid/reactivity
+              setOpenedWindows((prev) => prev.filter((_, index) => index !== props.index));
               setCurrentActiveWindow(null);
             })}
             showChildren={controlButtonsHovered()}
@@ -155,7 +156,7 @@ const Window: Component<{ index: number }> = (props) => {
           {/** Maximize button. */}
           <WindowControlButton
             color="#3EC54C"
-            action={() => setOpenedWindows(props.index, "isMaximized", prev => !prev)}
+            action={() => setOpenedWindows(props.index, "isMaximized", (prev) => !prev)}
             showChildren={controlButtonsHovered()}
           >
             {current_window().isMaximized
@@ -178,7 +179,7 @@ const Window: Component<{ index: number }> = (props) => {
         </Suspense>
       </div>
     </div>
-  ); 
+  );
 };
 
 export default Window;

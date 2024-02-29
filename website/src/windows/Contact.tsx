@@ -28,7 +28,6 @@ const ContactCard: Component<{
 );
 
 const ContactWindow: Component = () => {
-
   return (
     <div class="p-4">
       <div class="text-center pt-4 pb-8">

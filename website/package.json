@@ -1,29 +1,30 @@
 {
-	"name": "vexcited",
-	"version": "0.2.0",
+	"name": "www.vexcited.com",
+	"version": "0.0.0",
+	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"build": "tsc && vite build",
-		"lint": "eslint . --ext .ts,tsx"
+		"build": "pnpm lint && vite build",
+		"lint": "tsc && eslint ."
 	},
 	"dependencies": {
-		"@fontsource/fira-code": "^4.5.12",
-		"@fontsource/poppins": "^4.5.10",
-		"interactjs": "^1.10.17",
-		"solid-icons": "^1.0.4",
-		"solid-js": "^1.6.5"
+		"@fontsource/fira-code": "^5.0.16",
+		"@fontsource/poppins": "^5.0.8",
+		"@unocss/reset": "^0.58.5",
+		"interactjs": "^1.10.26",
+		"solid-icons": "^1.1.0",
+		"solid-js": "^1.8.15"
 	},
 	"devDependencies": {
-		"@types/node": "^18.11.16",
-		"@typescript-eslint/eslint-plugin": "^5.46.1",
-		"@typescript-eslint/parser": "^5.46.1",
-		"eslint": "^8.29.0",
-		"eslint-plugin-solid": "^0.9.1",
-		"typescript": "^4.9.4",
-		"vite": "^3.2.8",
-		"vite-plugin-solid": "^2.5.0",
-		"vite-plugin-windicss": "^1.8.10",
-		"windicss": "^3.5.6"
+		"@stylistic/eslint-plugin": "^1.6.3",
+		"@types/node": "^20.11.24",
+		"@typescript-eslint/parser": "^7.1.0",
+		"eslint": "^8.57.0",
+		"eslint-plugin-solid": "^0.13.1",
+		"typescript": "^5.3.3",
+		"unocss": "^0.58.5",
+		"vite": "^5.1.4",
+		"vite-plugin-solid": "^2.10.1"
 	},
 	"license": "MIT"
 }

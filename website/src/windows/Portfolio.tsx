@@ -28,7 +28,7 @@ const PROJECTS: {
     type: "app",
     description: "The website you're currently browsing.",
     github_repo: "Vexcited/Vexcited",
-    website_url: "https://www.vexcited.ml/"
+    website_url: "https://www.vexcited.com/"
   },
   {
     name: "solid-hcaptcha",
@@ -75,7 +75,7 @@ const PortfolioWindow: Component = () => {
 
       <section class="p-4 overflow-auto flex flex-wrap justify-center gap-8">
         <For each={PROJECTS}>
-          {project => (
+          {(project) => (
             <div class="flex flex-col justify-between gap-8 p-4 group rounded-md bg-grey-dark bg-opacity-40 border border-grey-dark border-opacity-60 hover:border-blue hover:bg-opacity-60 transition-colors max-w-sm w-full">
               <div >
                 <h3 class="text-lg">{project.name}</h3>

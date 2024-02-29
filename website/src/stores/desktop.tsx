@@ -23,10 +23,10 @@ export interface DesktopItem extends Application {
 
 export interface OpenedWindow {
   app: Application;
-  
+
   isMaximized: boolean;
   isMinimized: boolean;
-  
+
   position: {
     x: number,
     y: number,
@@ -37,9 +37,9 @@ export interface OpenedWindow {
 }
 
 export const createNewWindowObject = (app: Application): OpenedWindow => {
-  // Note: Taskbar takes 56px at the bottom of the screen. 
+  // Note: Taskbar takes 56px at the bottom of the screen.
   const TASKBAR_HEIGHT = 56;
-  
+
   // We take 200px of padding.
   const height = (screen.height - TASKBAR_HEIGHT) - 200;
   const width = screen.width - 200;
@@ -49,20 +49,20 @@ export const createNewWindowObject = (app: Application): OpenedWindow => {
 
     isMaximized: false,
     isMinimized: false,
-  
+
     position: {
       // We try to center the windows when they open for the first time.
       x: screen.width / 2 - width / 2,
       y: (screen.height - TASKBAR_HEIGHT) / 2 - height / 2,
 
-      height, 
+      height,
       width
     }
   };
 };
 
 export const openNewWindow = (app: Application) => {
-  setOpenedWindows(draft => [...draft, createNewWindowObject(app)]);
+  setOpenedWindows((draft) => [...draft, createNewWindowObject(app)]);
   setCurrentActiveWindow(openedWindows.length - 1);
 };
 
@@ -81,7 +81,7 @@ export const applications: Application[] = [
   }
 ];
 
-export const desktopItems: DesktopItem[] = applications.map(app => ({
+export const desktopItems: DesktopItem[] = applications.map((app) => ({
   ...app,
   start_action: () => openNewWindow(app)
 }));
