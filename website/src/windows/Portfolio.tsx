@@ -14,8 +14,7 @@ const PROJECTS: {
     name: "fortigate-web-sslvpn",
     type: "library",
     description: "Make requests through FortiGate SSL VPN using their web mode.",
-    github_repo: "Vexcited/fortigate-web-sslvpn",
-    website_url: "https://edt.vexcited.com/"
+    github_repo: "Vexcited/fortigate-web-sslvpn"
   },
   {
     name: "Signatures-IUT-Limoges",
