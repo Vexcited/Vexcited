@@ -1,6 +1,8 @@
-import { batch, Component, onMount, ParentComponent } from "solid-js";
+import {
+  batch, type Component, onMount, type ParentComponent,
+  Show, createSignal, Suspense
+} from "solid-js";
 
-import { Show, createSignal, Suspense } from "solid-js";
 import interact from "interactjs";
 
 import { setOpenedWindows, openedWindows, setCurrentActiveWindow, currentActiveWindow } from "@/stores/desktop";
@@ -40,7 +42,7 @@ const WindowControlButton: ParentComponent<{ color: string, action: () => unknow
 
 const Window: Component<{ index: number }> = (props) => {
   const [controlButtonsHovered, setControlButtonsHovered] = createSignal(false);
-  const current_window = () => openedWindows[props.index];
+  const currentWindow = () => openedWindows[props.index];
   let windowRef: HTMLDivElement | undefined;
   let windowTitleRef: HTMLDivElement | undefined;
 
@@ -105,17 +107,17 @@ const Window: Component<{ index: number }> = (props) => {
       ref={windowRef}
       class="fixed flex-col"
       classList={{
-        "bottom-14 top-0 left-0 right-0": screen.width < 768 || current_window().isMaximized,
-        "md:(shadow-xl shadow-grey-dark rounded-xl)": !current_window().isMaximized,
-        "hidden": current_window().isMinimized,
-        "flex": !current_window().isMinimized,
+        "bottom-14 top-0 left-0 right-0": screen.width < 768 || currentWindow().isMaximized,
+        "md:(shadow-xl shadow-grey-dark rounded-xl)": !currentWindow().isMaximized,
+        "hidden": currentWindow().isMinimized,
+        "flex": !currentWindow().isMinimized,
         "z-40": currentActiveWindow() === props.index
       }}
-      style={screen.width >= 768 && !current_window().isMaximized ? {
-        width: current_window().position.width + "px",
-        height: current_window().position.height + "px",
-        top: current_window().position.y + "px",
-        left: current_window().position.x + "px"
+      style={screen.width >= 768 && !currentWindow().isMaximized ? {
+        width: currentWindow().position.width + "px",
+        height: currentWindow().position.height + "px",
+        top: currentWindow().position.y + "px",
+        left: currentWindow().position.x + "px"
       } : void 0}
       onMouseDown={() => setCurrentActiveWindow(props.index)}
     >
@@ -123,7 +125,7 @@ const Window: Component<{ index: number }> = (props) => {
         ref={windowTitleRef}
         class="hidden relative md:flex px-4.5 h-11 select-none bg-grey-dark w-full"
         classList={{
-          "md:(rounded-t-xl border border-b-0 border-grey-light)": !current_window().isMaximized
+          "md:(rounded-t-xl border border-b-0 border-grey-light)": !currentWindow().isMaximized
         }}
       >
         <div
@@ -162,23 +164,23 @@ const Window: Component<{ index: number }> = (props) => {
             action={() => setOpenedWindows(props.index, "isMaximized", (prev) => !prev)}
             showChildren={controlButtonsHovered()}
           >
-            {current_window().isMaximized
+            {currentWindow().isMaximized
               ? <MacOSMinimize color="#10610F" />
               : <MacOSMaximize color="#10610F" />
             }
           </WindowControlButton>
         </div>
 
-        <span class="pointer-events-none absolute right-0 left-0 h-full flex justify-center items-center">{current_window().app.name}</span>
+        <span class="pointer-events-none absolute right-0 left-0 h-full flex justify-center items-center">{currentWindow().app.name}</span>
       </div>
 
       <div class="h-full bg-grey w-full overflow-y-auto"
         classList={{
-          "md:(border border-t-0 border-grey-light rounded-b-xl)": !current_window().isMaximized
+          "md:(border border-t-0 border-grey-light rounded-b-xl)": !currentWindow().isMaximized
         }}
       >
         <Suspense fallback={<div>Loading...</div>}>
-          <Dynamic component={current_window().app.component} />
+          <Dynamic component={currentWindow().app.component} />
         </Suspense>
       </div>
     </div>
