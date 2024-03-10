@@ -15,13 +15,13 @@
 <!--START_SECTION:waka-->
 
 ```plain
-From: 06 February 2024 - To: 07 March 2024
+From: 07 February 2024 - To: 08 March 2024
 
-TypeScript     54 hrs 11 mins  ######-------------------   25.24 %
-JavaScript     4 hrs 52 mins   #------------------------   02.27 %
-Markdown       2 hrs 56 mins   -------------------------   01.37 %
-C              2 hrs 35 mins   -------------------------   01.20 %
-Figma Design   1 hr 57 mins    -------------------------   00.91 %
+TypeScript     51 hrs 50 mins  ######-------------------   24.51 %
+JavaScript     4 hrs 23 mins   #------------------------   02.08 %
+C              2 hrs 46 mins   -------------------------   01.31 %
+Markdown       2 hrs 44 mins   -------------------------   01.30 %
+Figma Design   1 hr 56 mins    -------------------------   00.92 %
 ```
 
 <!--END_SECTION:waka-->
