@@ -17,6 +17,12 @@ const PROJECTS: {
     github_repo: "Vexcited/fortigate-web-sslvpn"
   },
   {
+    name: "Synetta",
+    type: "library",
+    description: "A SolidJS to JavaFX framework that works by running SolidJS through Javet.",
+    github_repo: "Vexcited/Synetta"
+  },
+  {
     name: "Signatures-IUT-Limoges",
     type: "app",
     description: "An app and a library to fetch the grades of students studying at the BUT Informatique of the IUT of Limoges.",
