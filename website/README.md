@@ -1,8 +1,6 @@
-# Vexcited's Website [![Deploy Website](https://github.com/Vexcited/Vexcited/actions/workflows/website-deploy.yml/badge.svg)](https://www.vexcited.com/)
+# Vexcited's Website
 
 Made with [Solid](https://solidjs.com), [UnoCSS](https://unocss.dev) and deployed on [Vercel](https://vercel.com).
-
-I use a [GitHub Action to deploy to Vercel](https://github.com/marketplace/actions/vercel-action) to prevent deploying changes on README updates made for WakaTime tracking.
 
 ## Development
 
