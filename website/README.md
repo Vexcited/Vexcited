@@ -4,9 +4,19 @@ Made with [Solid](https://solidjs.com), [UnoCSS](https://unocss.dev) and deploye
 
 ## Development
 
-`git clone https://github.com/Vexcited/Vexcited`, `cd ./Vexcited/website` and run `pnpm install` to install dependencies.
+```bash
+git clone https://github.com/Vexcited/Vexcited && cd ./Vexcited/website
 
-Use `pnpm dev` to start Vite development server
-or `pnpm build` to build into the `./dist` folder.
+# Install dependencies
+pnpm install
 
-Also, use lint the code using `pnpm lint`.
+# Start development server
+pnpm dev
+
+# Check for errors in code style
+pnpm lint
+
+# Build for production
+pnpm build
+# you can find the static assets under the `./dist` folder
+```
