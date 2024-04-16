@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: athul/waka-readme@a359b8d3e969e8b68018a187f10d1a22e45dffe5 # waiting for <https://github.com/athul/waka-readme/issues/157> to be solved
+      - uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           COMMIT_MESSAGE: "chore: updated WakaTime"
