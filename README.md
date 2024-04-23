@@ -15,12 +15,12 @@
 <!--START_SECTION:waka-->
 
 ```plain
-From: 21 March 2024 - To: 20 April 2024
+From: 22 March 2024 - To: 21 April 2024
 
-TypeScript       51 hrs 25 mins  ######-------------------   24.16 %
+TypeScript       52 hrs 14 mins  ######-------------------   24.56 %
 Java             16 hrs 55 mins  ##-----------------------   07.95 %
-Markdown         6 hrs 39 mins   #------------------------   03.13 %
-JSON             1 hr 58 mins    -------------------------   00.93 %
+Markdown         7 hrs 17 mins   #------------------------   03.43 %
+JSON             2 hrs 10 mins   -------------------------   01.02 %
 JavaScript       1 hr 48 mins    -------------------------   00.85 %
 ```
 
