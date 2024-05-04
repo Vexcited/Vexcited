@@ -15,13 +15,13 @@
 <!--START_SECTION:waka-->
 
 ```plain
-From: 01 April 2024 - To: 01 May 2024
+From: 02 April 2024 - To: 02 May 2024
 
-TypeScript       56 hrs 52 mins  #######------------------   27.59 %
-Java             16 hrs 16 mins  ##-----------------------   07.90 %
-Markdown         7 hrs 53 mins   #------------------------   03.82 %
-JavaScript       6 hrs 1 min     #------------------------   02.92 %
-Dart             2 hrs 49 mins   -------------------------   01.37 %
+TypeScript       58 hrs 33 mins  #######------------------   28.68 %
+Java             15 hrs 50 mins  ##-----------------------   07.76 %
+Markdown         7 hrs 41 mins   #------------------------   03.77 %
+JavaScript       6 hrs 17 mins   #------------------------   03.09 %
+Dart             2 hrs 49 mins   -------------------------   01.38 %
 ```
 
 <!--END_SECTION:waka-->
