@@ -1,5 +1,5 @@
 # Welcome to my GitHub ! 🌃
-I'm Mikkel RINGAUD (he/him) - I'm a fullstack developer and student at the [IUT of the University of Limoges, France](https://iut.unilim.fr). \
+**I'm Mikkel RINGAUD (he/him)** - I'm a fullstack developer and student at the [IUT of the University of Limoges, France](https://iut.unilim.fr). \
 All my projects are open source and available here.
 
 ## Developing using the following technologies
