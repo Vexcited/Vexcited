@@ -29,7 +29,7 @@ const ContactWindow: Component = () => {
   return (
     <div class="p-4">
       <div class="text-center pt-4 pb-8">
-        <h2 class="text-lg">Mikkel RINGAUD</h2>
+        <h2 class="text-lg">Mikkel ALMONTE--RINGAUD</h2>
         <p class="text-sm text-white-dark text-opacity-80">
           Here is a list of my socials where you can find me !
         </p>
