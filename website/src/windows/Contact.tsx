@@ -69,8 +69,8 @@ const ContactWindow: Component = () => {
         <ContactCard
           icon={SiGmail}
           social_name="E-Mail"
-          value="mikkel@milescode.dev"
-          href="mailto:mikkel@milescode.dev"
+          value="vexitofficial@gmail.com"
+          href="mailto:vexitofficial@gmail.com"
         />
       </div>
 
