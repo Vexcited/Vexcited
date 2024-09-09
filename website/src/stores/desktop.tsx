@@ -6,6 +6,7 @@ import { createStore } from "solid-js/store";
 
 import { IoMail } from "solid-icons/io";
 import { HiSolidFolder } from "solid-icons/hi";
+import { FaSolidFilePdf } from "solid-icons/fa";
 
 import { screen } from "@/stores/remote";
 
@@ -78,6 +79,12 @@ export const applications: Application[] = [
     name: "Portfolio",
     icon: HiSolidFolder,
     component: lazy(() => import("@/windows/Portfolio"))
+  },
+  {
+    id: "cv",
+    name: "CV",
+    icon: FaSolidFilePdf,
+    component: lazy(() => import("@/windows/CV"))
   }
 ];
 
