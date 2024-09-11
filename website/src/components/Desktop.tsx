@@ -74,6 +74,7 @@ const Desktop: Component = () => {
             <For each={openedWindows}>
               {(window, index) => (
                 <button
+                  title={window.app.name}
                   class="p-2 rounded-lg border bg-grey"
                   classList={{
                     "bg-opacity-100 border-blue": index() === currentActiveWindow(),
