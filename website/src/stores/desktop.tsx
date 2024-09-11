@@ -9,12 +9,17 @@ import { FaSolidFilePdf, FaSolidLink } from "solid-icons/fa";
 
 import { screen } from "@/stores/remote";
 
+export type ApplicationComponent = Component<{
+  interacting: boolean;
+  active: boolean;
+}>;
+
 export interface Application {
   /** Identifier, like an executable name. */
   id: string;
   name: string;
   icon: IconTypes;
-  component: Component;
+  component: ApplicationComponent
 }
 
 export interface DesktopItem extends Application {

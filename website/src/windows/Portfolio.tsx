@@ -1,4 +1,4 @@
-import type { Component } from "solid-js";
+import type { ApplicationComponent } from "@/stores/desktop";
 import { For, Show } from "solid-js";
 
 const PROJECTS: {
@@ -150,8 +150,7 @@ const PROJECTS: {
   }
 ];
 
-const PortfolioWindow: Component = () => {
-
+const PortfolioWindow: ApplicationComponent = () => {
   return (
     <div>
       <section class="p-4 overflow-auto flex flex-wrap justify-center gap-8">

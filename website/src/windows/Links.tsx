@@ -1,8 +1,14 @@
-import type { Component } from "solid-js";
+import type { ApplicationComponent } from "@/stores/desktop";
 
-const LinksWindow: Component = () => {
+const LinksWindow: ApplicationComponent = (props) => {
   return (
-    <iframe src="https://links.vexcited.com" class="w-full h-full" />
+    <div class="p-2 h-full">
+      <iframe src="https://links.vexcited.com" class="w-full h-full rounded-md"
+        classList={{
+          "pointer-events-none": props.interacting || !props.active
+        }}
+      />
+    </div>
   );
 };
 

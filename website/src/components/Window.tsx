@@ -43,6 +43,10 @@ const WindowControlButton: ParentComponent<{ color: string, action: () => unknow
 const Window: Component<{ index: number }> = (props) => {
   const [controlButtonsHovered, setControlButtonsHovered] = createSignal(false);
   const currentWindow = () => openedWindows[props.index];
+
+  const isActive = () => currentActiveWindow() === props.index;
+  const [isInteracting, setInteracting] = createSignal(false);
+
   let windowRef: HTMLDivElement | undefined;
   let windowTitleRef: HTMLDivElement | undefined;
 
@@ -105,13 +109,13 @@ const Window: Component<{ index: number }> = (props) => {
   return (
     <div
       ref={windowRef}
-      class="fixed flex-col"
+      class="fixed flex-col select-none"
       classList={{
         "bottom-14 top-0 left-0 right-0": screen.width < 768 || currentWindow().isMaximized,
         "md:(shadow-xl shadow-grey-dark rounded-xl)": !currentWindow().isMaximized,
         "hidden": currentWindow().isMinimized,
         "flex": !currentWindow().isMinimized,
-        "z-40": currentActiveWindow() === props.index
+        "z-40": isActive()
       }}
       style={screen.width >= 768 && !currentWindow().isMaximized ? {
         width: currentWindow().position.width + "px",
@@ -119,7 +123,11 @@ const Window: Component<{ index: number }> = (props) => {
         top: currentWindow().position.y + "px",
         left: currentWindow().position.x + "px"
       } : void 0}
-      onMouseDown={() => setCurrentActiveWindow(props.index)}
+      onPointerDown={() => {
+        setCurrentActiveWindow(props.index);
+        setInteracting(true);
+      }}
+      onPointerUp={() => setInteracting(false)}
     >
       <div
         ref={windowTitleRef}
@@ -180,7 +188,11 @@ const Window: Component<{ index: number }> = (props) => {
         }}
       >
         <Suspense fallback={<div>Loading...</div>}>
-          <Dynamic component={currentWindow().app.component} />
+          <Dynamic
+            component={currentWindow().app.component}
+            interacting={isInteracting()}
+            active={isActive()}
+          />
         </Suspense>
       </div>
     </div>

@@ -1,8 +1,14 @@
-import type { Component } from "solid-js";
+import type { ApplicationComponent } from "@/stores/desktop";
 
-const CVWindow: Component = () => {
+const CVWindow: ApplicationComponent = (props) => {
   return (
-    <iframe src="/cv.pdf" class="w-full h-full" />
+    <div class="p-2 h-full">
+      <iframe src="/cv.pdf" class="w-full h-full rounded-md"
+        classList={{
+          "pointer-events-none": props.interacting || !props.active
+        }}
+      />
+    </div>
   );
 };
 
