@@ -4,9 +4,8 @@ import type { Component } from "solid-js";
 import { createSignal, lazy } from "solid-js";
 import { createStore } from "solid-js/store";
 
-import { IoMail } from "solid-icons/io";
 import { HiSolidFolder } from "solid-icons/hi";
-import { FaSolidFilePdf } from "solid-icons/fa";
+import { FaSolidFilePdf, FaSolidLink } from "solid-icons/fa";
 
 import { screen } from "@/stores/remote";
 
@@ -69,10 +68,10 @@ export const openNewWindow = (app: Application) => {
 
 export const applications: Application[] = [
   {
-    id: "contact",
-    name: "Contact",
-    icon: IoMail,
-    component: lazy(() => import("@/windows/Contact"))
+    id: "links",
+    name: "Links",
+    icon: FaSolidLink,
+    component: lazy(() => import("@/windows/Links"))
   },
   {
     id: "portfolio",
