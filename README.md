@@ -12,13 +12,13 @@ All my projects are open source and available here.
 <!--START_SECTION:waka-->
 
 ```plain
-From: 27 September 2024 - To: 27 October 2024
+From: 28 September 2024 - To: 28 October 2024
 
-TypeScript        47 hrs 17 mins  ########-----------------   33.01 %
-Astro             9 hrs 5 mins    ##-----------------------   06.34 %
-Rust              7 hrs 57 mins   #------------------------   05.56 %
-Markdown          7 hrs 16 mins   #------------------------   05.08 %
-PHP               3 hrs 52 mins   #------------------------   02.71 %
+TypeScript            49 hrs 25 mins  #########----------------   35.74 %
+Astro                 9 hrs 5 mins    ##-----------------------   06.57 %
+Markdown              7 hrs 25 mins   #------------------------   05.37 %
+Rust                  6 hrs 49 mins   #------------------------   04.93 %
+PHP                   3 hrs 37 mins   #------------------------   02.62 %
 ```
 
 <!--END_SECTION:waka-->
