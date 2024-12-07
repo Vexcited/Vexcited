@@ -12,13 +12,13 @@ All my projects are open source and available here.
 <!--START_SECTION:waka-->
 
 ```plain
-From: 04 November 2024 - To: 04 December 2024
+From: 05 November 2024 - To: 05 December 2024
 
-TypeScript             42 hrs 44 mins  ####---------------------   14.32 %
-Kotlin                 17 hrs 33 mins  #------------------------   05.89 %
-JavaScript             14 hrs 8 mins   #------------------------   04.74 %
-Rust                   12 hrs 57 mins  #------------------------   04.34 %
-Markdown               6 hrs 59 mins   #------------------------   02.34 %
+TypeScript             39 hrs 38 mins  ###----------------------   13.20 %
+Kotlin                 17 hrs 18 mins  #------------------------   05.77 %
+JavaScript             14 hrs 46 mins  #------------------------   04.92 %
+Rust                   13 hrs 34 mins  #------------------------   04.52 %
+Markdown               7 hrs 12 mins   #------------------------   02.40 %
 ```
 
 <!--END_SECTION:waka-->
