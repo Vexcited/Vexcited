@@ -15,7 +15,6 @@ jobs:
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           COMMIT_MESSAGE: "chore: updated WakaTime"
-          IGNORED_LANGUAGES: Other
           BLOCKS: -#
           TIME_RANGE: last_30_days
           AUTHOR_NAME: Mikkel ALMONTE--RINGAUD
