@@ -8,23 +8,23 @@
 		"lint": "tsc && eslint ."
 	},
 	"dependencies": {
-		"@fontsource/fira-code": "^5.0.16",
-		"@fontsource/poppins": "^5.0.8",
-		"@unocss/reset": "^0.58.5",
-		"interactjs": "^1.10.26",
+		"@fontsource/fira-code": "^5.2.6",
+		"@fontsource/poppins": "^5.2.6",
+		"@unocss/reset": "^0.58.9",
+		"interactjs": "^1.10.27",
 		"solid-icons": "^1.1.0",
-		"solid-js": "^1.9.4"
+		"solid-js": "^1.9.7"
 	},
 	"devDependencies": {
-		"@stylistic/eslint-plugin": "^1.6.3",
-		"@types/node": "^20.11.24",
-		"@typescript-eslint/parser": "^7.1.0",
-		"eslint": "^8.57.0",
-		"eslint-plugin-solid": "^0.13.1",
-		"typescript": "^5.3.3",
-		"unocss": "^0.58.5",
-		"vite": "^5.1.8",
-		"vite-plugin-solid": "^2.10.1"
+		"@stylistic/eslint-plugin": "^1.8.1",
+		"@types/node": "^20.19.9",
+		"@typescript-eslint/parser": "^7.18.0",
+		"eslint": "^8.57.1",
+		"eslint-plugin-solid": "^0.13.2",
+		"typescript": "^5.8.3",
+		"unocss": "^0.58.9",
+		"vite": "^5.4.19",
+		"vite-plugin-solid": "^2.11.7"
 	},
 	"license": "MIT"
 }
