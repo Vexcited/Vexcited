@@ -12,14 +12,14 @@ All my projects are open source and available here.
 <!--START_SECTION:waka-->
 
 ```plain
-From: 01 August 2025 - To: 31 August 2025
+From: 02 August 2025 - To: 01 September 2025
 
-TypeScript                 152 hrs 19 mins #################--------   69.17 %
-Rust                       18 hrs 42 mins  ##-----------------------   08.50 %
-Vue.js                     12 hrs 41 mins  #------------------------   05.76 %
-JavaScript                 9 hrs 47 mins   #------------------------   04.45 %
-Markdown                   6 hrs 40 mins   #------------------------   03.03 %
-JSON                       4 hrs 34 mins   #------------------------   02.07 %
+TypeScript                 157 hrs 18 mins #################--------   69.79 %
+Rust                       18 hrs 42 mins  ##-----------------------   08.30 %
+Vue.js                     12 hrs 41 mins  #------------------------   05.63 %
+JavaScript                 9 hrs 47 mins   #------------------------   04.35 %
+Markdown                   6 hrs 40 mins   #------------------------   02.96 %
+JSON                       4 hrs 39 mins   #------------------------   02.06 %
 ```
 
 <!--END_SECTION:waka-->
