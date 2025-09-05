@@ -1,7 +1,7 @@
-# pwgen
+# pwgen [WEB]
 
-> Password policies aren't always great. That's why we generate passwords for our users based on a strong master password!
-> Made by @gehaxelt
+> Password policies aren't always great. That's why we generate passwords for our users based on a strong master password! \
+> By @gehaxelt
 
 When opening the challenge (`http://52.59.124.14:5003`), we get a blank page saying...
 
