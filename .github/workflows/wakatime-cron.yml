@@ -17,8 +17,6 @@ jobs:
           COMMIT_MESSAGE: "chore: updated WakaTime"
           BLOCKS: -#
           TIME_RANGE: last_30_days
-          AUTHOR_NAME: Mikkel ALMONTE--RINGAUD
-          AUTHOR_EMAIL: vexitofficial@gmail.com
           SHOW_TITLE: true
           LANG_COUNT: 6
           CODE_LANG: plain
