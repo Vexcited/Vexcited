@@ -17,14 +17,14 @@ I like music, programming and cosplay.
 <!--START_SECTION:waka-->
 
 ```plain
-From: 16 September 2025 - To: 16 October 2025
+From: 17 September 2025 - To: 17 October 2025
 
-TypeScript                         120 hrs 23 mins ##################-------   72.60 %
-JavaScript                         8 hrs 5 mins    #------------------------   04.88 %
-Markdown                           7 hrs 53 mins   #------------------------   04.76 %
-JSON                               7 hrs 43 mins   #------------------------   04.65 %
-YAML                               5 hrs           #------------------------   03.02 %
-Rust                               4 hrs 19 mins   #------------------------   02.61 %
+TypeScript                         116 hrs 52 mins ##################-------   72.65 %
+JavaScript                         8 hrs 10 mins   #------------------------   05.08 %
+Markdown                           8 hrs 2 mins    #------------------------   05.00 %
+JSON                               7 hrs 40 mins   #------------------------   04.77 %
+YAML                               5 hrs           #------------------------   03.11 %
+PHP                                3 hrs 39 mins   #------------------------   02.27 %
 ```
 
 <!--END_SECTION:waka-->
