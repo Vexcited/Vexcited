@@ -43,7 +43,7 @@ export default function View() {
       <div class="h-screen relative overflow-hidden">
         <img
           src={back}
-          class="absolute inset-0 size-screen object-cover"
+          class="absolute inset-0 size-screen object-cover pointer-events-none"
           style={{
             transform: `translate(${mouseX() * 10}px, ${
               mouseY() * 10
@@ -69,7 +69,7 @@ export default function View() {
 
         <img
           src={front}
-          class="absolute inset-0 size-screen object-cover"
+          class="absolute inset-0 size-screen object-cover pointer-events-none"
           style={{
             transform: `translate(${mouseX() * 20}px, ${
               mouseY() * 20
