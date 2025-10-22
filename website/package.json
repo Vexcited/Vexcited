@@ -4,8 +4,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"build": "pnpm lint && vite build",
-		"lint": "tsc && eslint ."
+		"build": "vite build"
 	},
 	"dependencies": {
 		"@fontsource/fira-code": "^5.2.6",

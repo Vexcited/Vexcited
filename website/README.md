@@ -5,18 +5,11 @@ Made with [Solid](https://solidjs.com), [UnoCSS](https://unocss.dev) and deploye
 ## Development
 
 ```bash
-git clone https://github.com/Vexcited/Vexcited && cd ./Vexcited/website
+git clone https://github.com/Vexcited/Vexcited
+cd ./Vexcited/website
 
-# Install dependencies
-pnpm install
+bun install
+bun dev
 
-# Start development server
-pnpm dev
-
-# Check for errors in code style
-pnpm lint
-
-# Build for production
-pnpm build
-# you can find the static assets under the `./dist` folder
+bun run build
 ```
