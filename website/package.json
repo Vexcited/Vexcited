@@ -12,8 +12,10 @@
 		"@fontsource/poppins": "^5.2.6",
 		"@unocss/reset": "^0.58.9",
 		"interactjs": "^1.10.27",
+		"locomotive-scroll": "5.0.0-beta.21",
 		"solid-icons": "^1.1.0",
-		"solid-js": "^1.9.7"
+		"solid-js": "^1.9.7",
+		"solid-motionone": "^1.0.4"
 	},
 	"devDependencies": {
 		"@stylistic/eslint-plugin": "^1.8.1",
@@ -27,6 +29,8 @@
 		"vite-plugin-solid": "^2.11.7"
 	},
 	"license": "MIT",
-  "packageManager": "pnpm@10.13.1",
-  "onlyBuiltDependencies": ["esbuild"]
+	"packageManager": "pnpm@10.13.1",
+	"onlyBuiltDependencies": [
+		"esbuild"
+	]
 }

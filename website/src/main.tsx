@@ -1,36 +1,12 @@
 /* @refresh reload */
 import "@fontsource/poppins";
+import "@fontsource/poppins/900-italic.css";
+import "@fontsource/poppins/900.css";
 import "@fontsource/fira-code";
 import "@unocss/reset/tailwind.css";
 import "virtual:uno.css";
 
 import { render } from "solid-js/web";
-import { onMount, onCleanup } from "solid-js";
+import Home from "./pages/index";
 
-import {
-  startKeyboardListener,
-  stopKeyboardListener,
-
-  startScreenResizeListener,
-  stopScreenResizeListener
-} from "@/stores/remote";
-
-// Components
-import Desktop from "@/components/Desktop";
-
-render(
-  () => {
-    onMount(() => {
-      startKeyboardListener();
-      startScreenResizeListener();
-    });
-
-    onCleanup(() => {
-      stopKeyboardListener();
-      stopScreenResizeListener();
-    });
-
-    return <Desktop />;
-  },
-  document.getElementById("root") as HTMLDivElement
-);
+render(() => <Home />, document.getElementById("root") as HTMLDivElement);
