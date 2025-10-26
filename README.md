@@ -3,12 +3,6 @@
 I like music, programming and cosplay.
 
 <p align=center>
-  <img width="279" alt="len kagamine with cat ears" src="https://github.com/user-attachments/assets/dbe0836e-5f92-4170-9c97-9b457da793a1" />
-  <img width="279" alt="miku maid, every miku is canon" src="https://github.com/user-attachments/assets/2cef7a76-f8a5-402a-a6ba-0f7a7a89fcd5" />
-  <img width="279" alt="len kagamine again ughh" src="https://github.com/user-attachments/assets/d92e7d95-2cbe-4684-a3c8-dd4151e0353c" />
-</p>
-
-<p align=center>
   <img src="https://skillicons.dev/icons?i=solidjs,pnpm,ts,vercel,netlify,rust,astro,git,vue,md,figma,github,bun,cloudflare,py,tailwind,nginx,tauri,vite,dart,flutter,kotlin,elysia" />
 </p>
 
