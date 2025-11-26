@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "pwntools": "https://github.com/Vexcited/pwntools"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "lockfileVersion": 1,
+  "configVersion": 1,
+  "workspaces": {
+    "": {
+      "dependencies": {
+        "pwntools": "https://github.com/Vexcited/pwntools",
+      },
+    },
+  },
+  "packages": {
+    "pwntools": ["pwntools@github:Vexcited/pwntools#01f4626", {}, "Vexcited-pwntools-01f4626"],
+  }
+}
