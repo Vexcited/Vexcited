@@ -17,14 +17,9 @@ I like music, programming and cosplay.
 <!--START_SECTION:waka-->
 
 ```plain
-From: 01 December 2025 - To: 31 December 2025
+From: 04 December 2025 - To: 03 January 2026
 
-Other         6 hrs 3 mins    ################---------   65.41 %
-TypeScript    1 hr 34 mins    ####---------------------   16.97 %
-Vue.js        31 mins         #------------------------   05.58 %
-Image (svg)   25 mins         #------------------------   04.64 %
-Bash          14 mins         #------------------------   02.60 %
-TOML          12 mins         #------------------------   02.31 %
+No activity tracked
 ```
 
 <!--END_SECTION:waka-->
