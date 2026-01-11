@@ -17,7 +17,7 @@ I like music, programming and cosplay.
 <!--START_SECTION:waka-->
 
 ```plain
-From: 09 December 2025 - To: 08 January 2026
+From: 10 December 2025 - To: 09 January 2026
 
 No activity tracked
 ```
