@@ -19,7 +19,6 @@ I like music, programming and cosplay.
 ```plain
 From: 15 December 2025 - To: 14 January 2026
 
-Unknown        55 hrs 15 mins  ###########--------------   43.64 %
 Typescript     23 hrs 30 mins  #####--------------------   18.56 %
 Vue            18 hrs 28 mins  ####---------------------   14.59 %
 Rust           9 hrs 57 mins   ##-----------------------   07.86 %
