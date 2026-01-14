@@ -24,4 +24,5 @@ No activity tracked
 
 <!--END_SECTION:waka-->
 
-[![WakaTime Public Profile](https://wakatime.com/badge/user/0839e595-e07a-435c-8d59-ed95f2a3d6dd.svg?style=flat-square)](https://wakatime.com/@0839e595-e07a-435c-8d59-ed95f2a3d6dd)
+[![Wakapi: All Time](https://img.shields.io/endpoint?url=https://wakapi.vexcited.com/api/compat/shields/v1/Vexcited/interval:all_time&label=All%20time&color=blue&style=flat-square)](https://wakatime.com/@0839e595-e07a-435c-8d59-ed95f2a3d6dd)
+
