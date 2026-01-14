@@ -13,8 +13,9 @@ jobs:
     steps:
       - uses: athul/waka-readme@master
         with:
-          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          COMMIT_MESSAGE: "chore: updated WakaTime"
+          WAKATIME_API_KEY: ${{ secrets.API_KEY }}
+          API_BASE_URL: ${{ secrets.API_URL }}
+          COMMIT_MESSAGE: "chore: update stats"
           BLOCKS: -#
           TIME_RANGE: last_30_days
           SHOW_TITLE: true
