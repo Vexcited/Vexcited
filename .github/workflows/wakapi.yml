@@ -18,6 +18,7 @@ jobs:
           COMMIT_MESSAGE: "chore: update stats"
           BLOCKS: -#
           TIME_RANGE: last_30_days
+          IGNORED_LANGUAGES: Unknown
           SHOW_TITLE: true
           LANG_COUNT: 6
           CODE_LANG: plain
