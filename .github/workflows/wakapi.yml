@@ -1,4 +1,4 @@
-name: WakaTime Update
+name: Wakapi
 
 on:
   workflow_dispatch:
@@ -6,8 +6,8 @@ on:
     - cron: "0 0 * * *"
 
 jobs:
-  wakatime-update:
-    name: Update README
+  update:
+    name: Update
     runs-on: ubuntu-latest
 
     steps:
