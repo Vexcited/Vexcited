@@ -17,13 +17,13 @@ I like music, programming and cosplay.
 <!--START_SECTION:waka-->
 
 ```plain
-From: 18 December 2025 - To: 17 January 2026
+From: 19 December 2025 - To: 18 January 2026
 
-Typescript    20 hrs 11 mins  ####---------------------   16.02 %
-Vue           17 hrs 39 mins  ####---------------------   14.01 %
-Rust          10 hrs 13 mins  ##-----------------------   08.10 %
-TSX           6 hrs 29 mins   #------------------------   05.15 %
-Zig           3 hrs 11 mins   #------------------------   02.53 %
+Typescript    19 hrs 53 mins  ####---------------------   16.60 %
+Vue           14 hrs 38 mins  ###----------------------   12.22 %
+Rust          10 hrs 12 mins  ##-----------------------   08.51 %
+TSX           5 hrs 49 mins   #------------------------   04.86 %
+Zig           3 hrs 11 mins   #------------------------   02.66 %
 ```
 
 <!--END_SECTION:waka-->
