@@ -1,6 +1,8 @@
 # Vexcited 🎀
 
-I like music, programming and cosplay.
+> I am currently in the process of moving most of my GitHub repositories to [Radicle](https://radicle.xyz), you might want to see which ones are already moved to my personal seed @ <https://explore.rad.vexcited.com>.
+
+I like music, programming and cosplay!
 
 <p align=center>
   <img width="279" alt="len kagamine with cat ears" src="https://github.com/user-attachments/assets/dbe0836e-5f92-4170-9c97-9b457da793a1" />
