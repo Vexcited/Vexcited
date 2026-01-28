@@ -1,6 +1,6 @@
 # Vexcited 🎀
 
-> I am currently in the process of moving most of my GitHub repositories to [Radicle](https://radicle.xyz), you might want to see which ones are already moved to my personal seed @ <https://explore.rad.vexcited.com>.
+> I am currently in the process of moving most of my GitHub repositories to [Radicle](https://radicle.xyz), you might want to see which ones are already moved to my personal seed @ <https://code.vexcited.com>.
 
 I like music, programming and cosplay!
 
