@@ -1,1 +1,9 @@
-I am currently in the process of moving most of my GitHub repositories to [Radicle](https://radicle.xyz), you might want to see which ones are already moved to my personal seed @ <https://code.vexcited.com>.
+Hello there!
+
+**If you’re looking for my projects, they’ve moved to [Radicle](https://radicle.xyz).**
+You can now find everything listed on my personal seed <https://code.vexcited.com>.
+
+I still keep mirrors on GitHub so it’s easy for everyone to send pull requests.
+PRs opened here will be merged here and then synced to Radicle.
+
+Maybe we’ll cross paths here again one day.
